@@ -1,0 +1,146 @@
+<ion-view class="post-view">
+  <ion-content>
+  <div class="item item-avatar">
+    <img alt="ConsomBio" class="img-responsive" ng-src="{{post.acf.project_logo}}">
+    <h2>{{post.title}}</h2>
+    <p>{{post.acf.state}} , {{post.acf.country.name}}</p>
+  </div>
+    <div class="item item-body">
+    	<p ng-bind-html="post.acf.company_overview | rawHtml"></p>
+        <hr />
+        <div class="read-more col">
+              <a ui-sref="app.bussinessplan({postId: post.ID})" class="button button-small button-block button-assertive icon-right ion-chevron-right ">
+                Business Plan Summary
+              </a>
+            </div>
+        <hr />
+        
+        <h3>Summary</h3>
+        <div class="row">
+		  <div class="col">Prior Year Revenue</div>
+          <div class="col" ng-bind="post.acf.prior_year_revenue ? post.acf.prior_year_revenue : '--';"></div>
+		</div>
+        <div class="row">
+		  <div class="col">Current Year Revenue</div>
+          <div class="col" ng-bind="post.acf.current_year_revenue ? post.acf.current_year_revenue : '--';"></div>
+		</div>
+        <div class="row">
+		  <div class="col">Next Year Revenue</div>
+          <div class="col" ng-bind="post.acf.next_year_revenue ? post.acf.next_year_revenue : '--';"></div>
+		</div>
+        <div class="row">
+		  <div class="col">Employees</div>
+          <div class="col" ng-bind="post.acf.no_of_employees ? post.acf.no_of_employees : '--';"></div>
+		</div>
+    	<div class="row">
+		  <div class="col">Sub-Industry</div>
+          <div class="col">
+          <span ng-repeat="industry in post.acf.industry">
+          		{{industry.name}},
+          </span>
+          
+          </div>
+		</div>
+        <div ng-hide="!post.acf.products_services.length">
+		<hr />
+        <h3> Products and Services</h3>
+            <div class="list">
+    
+            <div ng-repeat="product in post.acf.products_services" class="item item-thumbnail-left">
+    
+              <img ng-src="{{ product.product_image }}">
+              <h2>{{ product.	product_name }}</h2>
+              <p ng-bind-html="product.product_description | rawHtml"></p>
+            </div>
+           </div>
+        </div>
+       
+       <div ng-hide="!post.acf.markets.length">
+       <hr />
+         <h3>Markets {{post.acf.markets.length}}</h3>
+         <div class="row header">
+          <div class="col">Market</div>
+          <div class="col">Annual Size</div>
+          <div class="col">% Growth Rate</div>
+        </div>
+        <div class="row" ng-repeat="market in post.acf.markets">
+          <div class="col">{{market.market}}</div>
+          <div class="col">{{market.market_size}}</div>
+          <div class="col">{{market.annual_growth_rate}}</div>
+        </div>
+       </div>
+       <div ng-hide="!post.acf.management.length">
+        <hr />
+        <h3>Management</h3>
+        	<div class="list">
+        
+                <div ng-repeat="mangement in post.acf.management" class="item item-avatar">
+        
+                  <img ng-src="{{ mangement.photograph }}">
+                  <h2>{{ mangement.full_name }}</h2>
+                  <p ng-bind-html="mangement.description | rawHtml"></p>
+                </div>
+       </div>
+       </div>
+       <hr />
+       <div class="list list-inset">
+
+    <div class="item">
+      <h3><strong>Business Plan</strong></h3>
+      <p>To view Business Plan Login as an Investor/Supporter</p>
+      <div class="row">
+          <div class="col">Funding Commitments</div>
+          <div class="col" ng-bind="post.acf.funding_commitments ? post.acf.funding_commitments : '--';"></div>
+      </div>
+      <div class="row">
+          <div class="col">Funding Remaining</div>
+          <div class="col" ng-bind="post.acf.private_funding ? post.acf.private_funding : '--';"></div>
+      </div>
+      <div class="row">
+          <div class="col">Funding Type</div>
+          <div class="col" ng-bind="post.acf.private_funding ? post.acf.funding_type : '--';"></div>
+       </div>
+      <div class="row">
+          <div class="col">Pre-Money Valuation</div>
+          <div class="col" ng-bind="post.acf.private_funding ? post.acf.pre-money_valution : '--';"></div>
+      </div>
+      <div class="row">
+          <div class="col">Interest / Dividend</div>
+          <div class="col" ng-bind="post.acf.private_funding ? post.acf.interest_dividend : '--';"></div>
+      </div>
+      <div class="row">
+          <div class="col">Previous Funding</div>
+          <div class="col" ng-bind="post.acf.private_funding ? post.acf.previous_funding : '--';"></div>
+       </div>
+    </div>
+
+    <button class="button button-full button-energized"> Dontaion</button>
+    <button class="button button-full button-assertive"> Invest</button>
+
+</div>	
+      
+            
+
+
+
+
+
+
+
+    
+      
+    </div>
+    
+  </ion-content>
+  <ion-footer-bar class="post-footer bar bar-footer bar-positive">
+    <div class="row">
+    
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon ion-heart"></a>
+      </div>
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon ion-android-share-alt" ng-click="sharePost(post.url)"></a>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

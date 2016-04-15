@@ -1,0 +1,78 @@
+<ion-view class="post-view">
+  <ion-content>
+  <div class="item item-avatar">
+    <img alt="ConsomBio" class="img-responsive" ng-src="{{post.acf.project_logo}}">
+    <h2>{{post.title}}</h2>
+    <p>{{post.acf.state}} , {{post.acf.country.name}}</p>
+  </div>
+  	<div class="">
+    <h3>Idea</h3>
+    <p ng-bind-html="post.acf.your_idea | rawHtml"></p>
+    </div>
+    <hr />
+    <div class="">
+    <h3>Buisness Model</h3>
+    <p ng-bind-html="post.acf.your_business_model | rawHtml"></p>
+    </div>
+    <hr />
+    <div class="">
+    <h3>Customer</h3>
+    <div ng-bind-html="post.acf.your_customer"  | rawHtml">
+    </div>
+    <hr />
+    <div class="">
+    <h3>Market</h3>
+    <div ng-bind-html="post.acf.your_market"  | rawHtml">
+    </div>
+    <hr />
+    <div class="">
+    <h3>Industry</h3>
+    <div ng-bind-html="post.acf.your_industry"  | rawHtml">
+    </div>
+    <hr />
+    <div class="">
+    <h3>Product</h3>
+    <div ng-bind-html="post.acf.your_product"  | rawHtml">
+    </div>
+    <hr />
+    <div class="">
+    <h3>Campaign</h3>
+    <div ng-bind-html="post.acf.your_campaign"  | rawHtml">
+    </div>
+    <hr />
+    <div class="">
+    <h3>Budget</h3>
+     <div ng-bind-html="post.acf.your_budget"  | rawHtml">
+     </div>
+     <hr />
+     <div class="">
+    <h3>Budget</h3>
+     <div ng-bind-html="post.acf.your_team"  | rawHtml">
+     </div>
+      <hr />
+     <div class="">
+    <h3>Pitch</h3>
+     <div ng-bind-html="post.acf.your_pitch"  | rawHtml">
+     </div>
+     
+     
+     
+        
+        
+    
+    
+    
+    
+  </ion-content>
+  <ion-footer-bar class="post-footer bar bar-footer bar-positive">
+    <div class="row">
+    
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon ion-heart"></a>
+      </div>
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon ion-android-share-alt" ng-click="sharePost(post.url)"></a>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,108 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+*/
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #00a7d1 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #f16530 !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+.has-header {
+  top: 100px;
+}
+.bar-header.bar {
+  height: 100px;
+    
+}
+.menu-content .bar-header.bar{
+ -webkit-box-shadow: 0 8px 6px -6px #bfbfbf;
+       -moz-box-shadow: 0 8px 6px -6px #bfbfbf;
+            box-shadow: 0 8px 6px -6px #bfbfbf;
+}
+.positive-bg a.item-content{background-color:$positive;color:#fff;}
+.bar-header .title {
+  left:60px;
+  margin-top: 0px;
+  height: 98px;
+  line-height: 100px;
+}
+
+.bar-header.slidemenucustom h1{ line-height:normal !important;overflow:visible!important;white-space:normal; margin-top:30px;}
+.bar-header .title{
+
+}
+.bar.bar-header .button.button-clear{margin-top:40px;}
+.homebox > *{ color:#fff;}
+.homebox{background-color:$positive; height:250px; padding:25px 10px;}
+.storieslist h2{font-size:1.5em;}
+
+.whychoose-wrapper {
+	padding: 30px 0;
+	background: #f8f8f8;
+	position: relative;
+	text-align: center;
+}
+.whychoose-wrapper .container{padding:0px 20px;}
+.whychoose-wrapper:after {
+	position: absolute;
+	width: 100%;
+	height: 28px;
+	left: 0px;
+	bottom: -28px;
+	content: "";
+	background: url(../img/whychose-dropshadow.png) no-repeat center top;
+}
+.whychoose-wrapper h2, .build-campaign h2 {
+	border: #d1d3d3 solid 1px;
+	padding: 10px 25px;
+	display: inline-block;
+	color: #fc4237;
+	font-size: 25px;
+	line-height: 25px;
+	font-weight: 100;
+	margin: 0 auto 30px;
+}
+.whychoose-wrapper h3 {
+	padding: 5px 0px;
+	color: #fc4237;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: normal;
+	margin: 0px;
+	text-transform: uppercase;
+}
+.whychoose-wrapper .icon {
+	height: 146px;
+	width: 146px;
+	font-size: 0em;
+	display: inline-block;
+	margin: 0 auto;
+	background: url(../img/gybi-sprite.png) no-repeat;
+}
+.whychoose-wrapper .icon.powerful {
+	background-position: 0 0;
+}
+.whychoose-wrapper .icon.professional {
+	background-position: -251px 0;
+}
+.whychoose-wrapper .icon.flexible {
+	background-position: -501px 0;
+}
+.whychoose-wrapper .icon.experts {
+	background-position: -752px 0;
+}
+.newslist a{ color:#bfbfbf}

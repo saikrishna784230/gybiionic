@@ -44,21 +44,25 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider.state('login', {
+  $stateProvider.state('app.login', {
     url: "/login",
-    templateUrl: "login.html",
-    controller: 'LoginCtrl'
+    views: {
+      'menuContent': {
+        templateUrl: "templates/login.html",
+    	controller: 'LoginCtrl'
+      }
+	} 
   })
-
+  
   .state('signup', {
     url: "/signup",
-    templateUrl: "signup.html",
+    templateUrl: "templates/signup.html",
     controller: 'SignupCtrl'
   })
 
   .state('forgot-password', {
     url: "/forgot-password",
-    templateUrl: "forgot-password.html",
+    templateUrl: "templates/forgot-password.html",
     controller: 'ForgotPasswordCtrl'
   })
   .state('app', {
@@ -112,12 +116,30 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
+  .state('app.singleinvestor', {
+    url: "/investor/:postId",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/investor_single.html",
+        controller: 'EntrepreneurCtrl'
+      }
+    }
+  })
     .state('app.supporters', {
     url: "/supporters",
     views: {
       'menuContent': {
         templateUrl: "templates/supporters.html",
         controller: 'SupporterslistCtrl'
+      }
+    }
+  })
+  .state('app.singlesupporter', {
+    url: "/supporter/:postId",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/supporter_single.html",
+        controller: 'EntrepreneurCtrl'
       }
     }
   })

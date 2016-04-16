@@ -1,0 +1,22 @@
+<ion-view class="post-view">
+  <ion-content>
+  <div class="item item-avatar">
+    
+    <h2>{{post.title}}</h2>
+    
+  </div>
+    
+    
+  </ion-content>
+  <ion-footer-bar class="post-footer bar bar-footer bar-positive">
+    <div class="row">
+    
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon ion-heart"></a>
+      </div>
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon ion-android-share-alt" ng-click="sharePost(post.url)"></a>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

@@ -204,7 +204,7 @@ angular.module('gybi.controllers', [])
 })
 .controller('InvestorslistCtrl',function($scope, $http, $stateParams, PostService, $ionicLoading) {
 	$ionicLoading.show({
-		template: 'Loading post...'
+		template: 'Loading Investors...'
 	});
 	PostService.getInvestors()
 	.then(function(data){
@@ -214,9 +214,19 @@ angular.module('gybi.controllers', [])
 	
 }).controller('SupporterslistCtrl',function($scope, $http, $stateParams, PostService, $ionicLoading) {
 	$ionicLoading.show({
-		template: 'Loading post...'
+		template: 'Loading Supporters...'
 	});
 	PostService.getSupporters()
+	.then(function(data){
+		$scope.posts = data;
+		$ionicLoading.hide();
+	});
+	
+}).controller('OrgnizationslistCtrl',function($scope, $http, $stateParams, PostService, $ionicLoading) {
+	$ionicLoading.show({
+		template: 'Loading Orgnizations...'
+	});
+	PostService.getOrganizations()
 	.then(function(data){
 		$scope.posts = data;
 		$ionicLoading.hide();

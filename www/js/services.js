@@ -223,7 +223,18 @@ angular.module('gybi.services', [])
 
 		return deferred.promise;
 	};
-	
+	this.getOrganizations = function() {
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'posts?type=organization&_jsonp=JSON_CALLBACK')
+		.success(function(data) {
+			deferred.resolve(data);
+		})
+		.error(function(data) {
+			deferred.reject(data);
+		});
+
+		return deferred.promise;
+	};
 	this.getSupporters = function() {
 		var deferred = $q.defer();
 		$http.jsonp(WORDPRESS_API_URL + 'posts?type=supporter&_jsonp=JSON_CALLBACK')

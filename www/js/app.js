@@ -143,6 +143,24 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
+  .state('app.organization', {
+    url: "/organizations",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/organizations.html",
+        controller: 'OrgnizationslistCtrl'
+      }
+    }
+  })
+  .state('app.singleorganization', {
+    url: "/organization/:postId",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/organization_single.html",
+        controller: 'EntrepreneurCtrl'
+      }
+    }
+  })
  .state('app.post', {
     url: "/post/:postId",
     views: {

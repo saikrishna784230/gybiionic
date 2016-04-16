@@ -36,7 +36,7 @@
 		  <div class="col">Sub-Industry</div>
           <div class="col">
           <span ng-repeat="industry in post.acf.industry">
-          		{{industry.name}},
+          		{{industry.name}}{{$last?'':','}}
           </span>
           
           </div>

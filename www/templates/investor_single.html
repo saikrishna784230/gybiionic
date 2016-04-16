@@ -1,9 +1,47 @@
 <ion-view class="post-view">
   <ion-content>
   <div class="item item-avatar">
-    
+     <img alt="ConsomBio" class="img-responsive" ng-src="{{post.author.avatar}}">
     <h2>{{post.title}}</h2>
-    
+        <p ng-repeat="country in post.acf.country_of_interest" >{{country.name}}</p>
+        <span ng-repeat="interested in post.acf.interested_industries" >{{interested.name}}{{$last ? '':','}}</span>
+       
+  </div>
+  
+  <div class="item item-body">
+    	<p ng-bind-html="post.acf.investor_expertise | rawHtml"></p>
+          </div>
+          
+   <div class="item item-body">
+    	<p ng-bind-html="post.acf.how_do_you_want_to_be_involved | rawHtml"></p>
+          </div> 
+   
+   <hr />
+   
+   <div class="row">
+		  <div class="col">Investment Capital</div>
+          <div class="col" ng-bind="post.acf.investment_capital ? post.acf.investment_capital + '$' : '--';"></div>
+		</div>
+           <div class="row">
+		  <div class="col">ROI</div>
+          <div class="col" ng-bind="post.acf.roi ? post.acf.roi + '%' : '--';"></div>
+		</div>
+         <div class="row">
+		  <div class="col">Country of Interest</div>
+          <div class="col" <p ng-repeat="country in post.acf.country_of_interest" >{{country.name}}</p></div>
+		</div>
+        <div class="row">
+		  <div class="col">Interested Industries</div>
+          <div class="col">
+           <span ng-repeat="interested in post.acf.interested_industries" >
+           {{interested.name}}{{$last ? '':','}}
+           </span>
+           </div>
+          
+               
+          
+		</div>
+         
   </div>
     
     

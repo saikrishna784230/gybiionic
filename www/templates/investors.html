@@ -9,11 +9,13 @@
             By <span>{{post.author.nickname}}</span> <span am-time-ago="post.date"></span>
           </p>
           <p class="post-location-">
-            <span>{{post.acf.country_of_interest.name}}</span> 
+            <span><p ng-repeat="country in post.acf.country_of_interest" >{{country.name}}</p></span> 
           </p>
+          
+          
         </div>
         <div class="post-content item item-text-wrap">
-          <p class="post-excerpt" ng-bind-html="post.acf.investor_expertise | limitTo: 100"></p>
+          <p class="post-expert" ng-bind-html="post.acf.investor_expertise | limitTo: 100"></p>
           <div class="post-actions row">
             <div class="actions col col-center col-66">
               <a class="button button-icon icon ion-bookmark" ng-click="bookmarkPost(post)"></a>

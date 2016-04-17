@@ -167,21 +167,36 @@ angular.module('gybi.controllers', [])
 })
 .controller('EntrepreneurslistCtrl',function($scope, $http, $stateParams, PostService, $ionicLoading) {
 	
-	$scope.page = 2;
+	$scope.page = 1;
 	$scope.posts = [];
+	var loading = false;
 	$scope.loadMore = function() {
-		$ionicLoading.show({ template: 'Loading Entrepreneurs...' });
-    	PostService.getEntrepreneurs($scope.page).then(function(data){
-		
-		$scope.page = parseInt($scope.page) + 1;
-		angular.forEach(data, function(value, key) {
-			$scope.posts.push(value);
-			$ionicLoading.hide();
+
+		if(loading == false)
+		{
+			loading = true;
+			$ionicLoading.show({ template: 'Loading Entrepreneurs...' });
+			PostService.getEntrepreneurs($scope.page).then(function(data){
+				
+			if(data.length > 0)
+			{
+				$scope.page = parseInt($scope.page) + 1;
+				angular.forEach(data, function(value, key) {
+					$scope.posts.push(value);
+					$ionicLoading.hide();
+					$scope.$broadcast('scroll.infiniteScrollComplete');
+				});
+				loading = false;		
+			}else{
+				$ionicLoading.hide();
+				$scope.$broadcast('scroll.infiniteScrollComplete');
+			}
+			});
+		}else{
 			$scope.$broadcast('scroll.infiniteScrollComplete');
-		});
-		
-	});
-  	};
+		}
+  	
+	};
 	$scope.$on('$stateChangeSuccess', function() {
     	$scope.loadMore();
   	});
@@ -213,23 +228,76 @@ angular.module('gybi.controllers', [])
 	});
 	
 }).controller('SupporterslistCtrl',function($scope, $http, $stateParams, PostService, $ionicLoading) {
-	$ionicLoading.show({
-		template: 'Loading Supporters...'
-	});
-	PostService.getSupporters()
-	.then(function(data){
-		$scope.posts = data;
-		$ionicLoading.hide();
-	});
+		
+	$scope.page = 1;
+	$scope.posts = [];
+	var loading = false;
+	$scope.loadMore = function() {
+
+		if(loading == false)
+		{
+			loading = true;
+			$ionicLoading.show({ template: 'Loading Supporters...' });
+			PostService.getSupporters($scope.page).then(function(data){
+				
+			if(data.length > 0)
+			{
+				$scope.page = parseInt($scope.page) + 1;
+				angular.forEach(data, function(value, key) {
+					$scope.posts.push(value);
+					$ionicLoading.hide();
+					$scope.$broadcast('scroll.infiniteScrollComplete');
+				});
+				loading = false;		
+			}else{
+				$ionicLoading.hide();
+				$scope.$broadcast('scroll.infiniteScrollComplete');
+			}
+			});
+		}else{
+			$scope.$broadcast('scroll.infiniteScrollComplete');
+		}
+  	
+	};
+	$scope.$on('$stateChangeSuccess', function() {
+    	$scope.loadMore();
+  	});
 	
 }).controller('OrgnizationslistCtrl',function($scope, $http, $stateParams, PostService, $ionicLoading) {
-	$ionicLoading.show({
-		template: 'Loading Orgnizations...'
-	});
-	PostService.getOrganizations()
-	.then(function(data){
-		$scope.posts = data;
-		$ionicLoading.hide();
-	});
+	
+	$scope.page = 1;
+	$scope.posts = [];
+	var loading = false;
+	$scope.loadMore = function() {
+
+		if(loading == false)
+		{
+			loading = true;
+			$ionicLoading.show({ template: 'Loading Orgnizations...' });
+			PostService.getOrganizations($scope.page).then(function(data){
+				
+			if(data.length > 0)
+			{
+				$scope.page = parseInt($scope.page) + 1;
+				angular.forEach(data, function(value, key) {
+					$scope.posts.push(value);
+					$ionicLoading.hide();
+					$scope.$broadcast('scroll.infiniteScrollComplete');
+				});
+				loading = false;		
+			}else{
+				$ionicLoading.hide();
+				$scope.$broadcast('scroll.infiniteScrollComplete');
+			}
+			});
+		}else{
+			$scope.$broadcast('scroll.infiniteScrollComplete');
+		}
+  	
+	};
+	$scope.$on('$stateChangeSuccess', function() {
+    	$scope.loadMore();
+  	});
+	
 	
 });

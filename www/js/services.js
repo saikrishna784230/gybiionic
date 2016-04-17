@@ -223,9 +223,9 @@ angular.module('gybi.services', [])
 
 		return deferred.promise;
 	};
-	this.getOrganizations = function() {
+	this.getOrganizations = function(page) {
 		var deferred = $q.defer();
-		$http.jsonp(WORDPRESS_API_URL + 'posts?type=organization&_jsonp=JSON_CALLBACK')
+		$http.jsonp(WORDPRESS_API_URL + 'posts?type=organization&page='+page+'&_jsonp=JSON_CALLBACK')
 		.success(function(data) {
 			deferred.resolve(data);
 		})

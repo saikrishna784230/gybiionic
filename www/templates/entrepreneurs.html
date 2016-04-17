@@ -6,10 +6,10 @@
 
 <div class="list">
   <label class="item item-input">
-    <input type="text" placeholder="Search Entrepreneur" ng-model="searchentreprener">
+    <input type="text" placeholder="Search Entrepreneur" ng-model="searchentrepreneur">
   </label>
   </div>
-      <ion-item ng-repeat="post in posts | filter:searchentreprener	" class="list card post-item">
+      <ion-item ng-repeat="post in posts | filter:searchentrepreneur	"class="list card post-item">
         <div class="post-heading item item-text-wrap item-avatar">
         	<img ng-src="{{post.acf.project_logo}}"/>
           <h2 class="post-title" ng-bind-html="post.title | rawHtml"></h2>

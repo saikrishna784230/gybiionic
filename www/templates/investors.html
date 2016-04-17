@@ -6,7 +6,9 @@
         	<img ng-src="{{post.author.avatar}}"/>
           <h2 class="post-title" ng-bind-html="post.title | rawHtml"></h2>
           <p class="post-author">
-            By <span>{{post.author.nickname}}</span> <span am-time-ago="post.date"></span>
+            By <span>{{post.author.nickname}}</span> 
+            <br />
+            <!-- <span>{{post.author.registered}}</span> -->
           </p>
           <p class="post-location-">
             <span><p ng-repeat="country in post.acf.country_of_interest" >{{country.name}}</p></span> 

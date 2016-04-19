@@ -161,6 +161,15 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
+  .state('app.contactus', {
+    url: "/contactus",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/contactus.html",
+        controller: 'ContactUsCtrl'
+      }
+    }
+  })
  .state('app.post', {
     url: "/post/:postId",
     views: {

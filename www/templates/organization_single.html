@@ -1,14 +1,15 @@
 <ion-view class="post-view">
   <ion-content>
-  <div class="item item-avatar">
-    	<div class="item item-avatar">
+
+    	<div class="item item-divider item-avatar">
      <img alt ="ConsomBio" class="img-responsive" img ng-src="{{post.acf.organization_logo}}" />
          <h3>{{post.title}}</h3>
+           <i class="icon ion-location"></i>
         <p ng-repeat="country in post.acf.country" >{{country.name}}</p>
         <span ng-repeat="sector in post.acf.sector" >{{sector.name}}{{$last ? '':','}}</span>
        
  		 </div>
-           </div>
+       
         <div class="post-content item item-text-wrap">
         <h3>About Organization</h3>
           <p class="post-expert" ng-bind-html="post.acf.description | limitTo: 100"></p>

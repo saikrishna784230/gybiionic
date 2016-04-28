@@ -13,7 +13,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     }
 	
 	
-	$rootScope.api = 'http://gybi.org/wp-json/';
+	$rootScope.api = WORDPRESS_API_URL;
 	
 	$rootScope.getPage=function(pageid){
 	// Load posts from the WordPress API
@@ -76,7 +76,8 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     url: "/home",
     views: {
       'menuContent': {
-        templateUrl: "templates/home.html"
+        templateUrl: "templates/home.html",
+		controller: 'HomeCtrl'
       }
     }
   })

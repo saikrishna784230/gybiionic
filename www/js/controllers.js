@@ -39,6 +39,19 @@ angular.module('gybi.controllers', [])
     }, 1000);
   };
 })
+.controller('HomeCtrl', function($scope, $http, CustomeService, PostService, $ionicLoading) {
+	$ionicLoading.show({
+		template: 'Loading GYBI'
+	});
+	CustomeService.buildYourCampaign().then(function(data){
+		$scope.campaign = data;
+		$ionicLoading.hide();
+	});
+	$scope.sharePost = function(link){
+		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
+	};
+})
+
 .controller('SendMailCtrl', function($scope) {
 	$scope.sendMail = function(){
 		cordova.plugins.email.isAvailable(

@@ -11,6 +11,21 @@ angular.module('gybi.services', [])
 	};
 })
 
+.service('CustomeService', function ($rootScope, $http, $q, WORDPRESS_API_URL){
+
+	this.buildYourCampaign = function() {
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'customize/buildcampaign/'+'?_jsonp=JSON_CALLBACK').success(function(data) {
+			deferred.resolve(data);
+		}).error(function(data) {
+			deferred.reject(data);
+		});
+
+		return deferred.promise;
+	};
+
+
+})
 
 // PUSH NOTIFICATIONS
 .service('PushNotificationsService', function ($rootScope, $cordovaPush, NodePushServer, GCM_SENDER_ID){

@@ -44,7 +44,7 @@ angular.module('gybi.controllers', [])
 		template: 'Loading GYBI'
 	});
 	CustomeService.buildYourCampaign().then(function(data){
-		$scope.campaign = data;
+		$scope.campaigns = data;
 		$ionicLoading.hide();
 	});
 	$scope.sharePost = function(link){

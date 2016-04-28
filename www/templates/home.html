@@ -54,33 +54,33 @@
       </div>
     </div>
      <div class="whychoose-wrapper buildcamp">
-      <div class="container">
+      <div class="container" ng-repeat="campaign in campaigns">
         <h1>Build your Campaign</h1>
         <hr />
         <div class="clearfix">
           <div ><img src="img/innvester_img.png">
-            <h1>1</h1>
+            <h1>{{campaign.investor}}</h1>
             <h3>INVESTORS</h3>
           </div>
 
           <div ><img src="img/entrepreneurs_img.png">
-            <h1>98</h1>
+            <h1>{{campaign.project}}</h1>
             <h3>ENTREPRENEURS</h3>
           </div>
          <div ><img src="img/deals_img.png">
-            <h1>3</h1>
+            <h1>{{campaign.deals}}</h1>
             <h3>DEALS</h3>
           </div>
            <div ><img src="img/supporters_img.png">
-            <h1>28</h1>
+            <h1>{{campaign.supporter}}</h1>
             <h3>SUPPORTERS</h3>
           </div>
            <div ><img src="img/organizations_img.png">
-            <h1>10</h1>
+            <h1>{{campaign.organization}}</h1>
             <h3>ORGANIZATIONS</h3>
           </div>
            <div ><img src="img/innvestment_img.png">
-            <h1>$12539</h1>
+            <h1>{{campaign.transfers}}</h1>
             <h3>INVESTMENTS</h3>
           </div>
         </div>
@@ -88,35 +88,6 @@
           RAISE CAPITAL NOW
         </button>
       </div>
-    </div>
-
-    <div class="list card newslist">
-      <div class="item item-divider">
-        <h2 class="assertive">Latest News</h2>
-      </div>
-      <div class="item item-body">
-        <ion-slide-box>
-        <ion-slide>
-          <div class="box">
-            <h2 class="positive">What Surprised You About Crowdfunding?</h2>
-            <p>Praesent vel lorem in risus gravida suscipit in eget turpis. Sed ultrices, magna in viverra dapibus, dolor massa porta velit, eu aliquam lorem nisi in sapien. Aenean efficitur laoreet dolor non feugiat. Integer tempus sem et efficitur sodales. Duis iaculis</p>
-            <a href="#">more...</a> <br />
-            <br />
-          </div>
-        </ion-slide>
-        <ion-slide>
-          <div class="box">
-            <h2 class="positive">What Are The Easiest And Hardest Things About Crowdfunding?</h2>
-            <p>Vivamus ac libero neque. Proin tincidunt posuere tellus ac egestas. Ut facilisis cursus lorem, in maximus dolor vehicula vel. Nulla facilisi. In porta sagittis risus ut vulputate. Morbi imperdiet laoreet erat, eget vehicula nisi condimentum ac. Nam mattis molestie commodo.</p>
-            <a href="#">more...</a> <br />
-            <br />
-          </div>
-
-        </ion-slide>
-
-
-      </div>
-
     </div>
 
   </ion-content>

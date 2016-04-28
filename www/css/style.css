@@ -34,4 +34,28 @@
 }
 .homebox {
 	height:270px !important
+}
+
+/*.buildcamp{
+	background: url("../img/campain-bg.png") !important;
+}*/
+.buildcamp{
+	background-color: black !important;
+}
+.buildcamp h1{
+	color: white !important;
+	margin-top: 10px;
+}
+.buildcamp h3{
+	color: white !important;
+	margin-bottom: 15px !important;
+}
+.buildcamp hr{
+	width: 100px;
+    height: 3px;
+    border: #f26530;
+    background-color: red !important;
+    margin-bottom: 20px;
+}
+
 

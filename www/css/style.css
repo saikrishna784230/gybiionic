@@ -1,1 +1,37 @@
 /* Empty. Add your own CSS if you like */
+.icon.ion-location {
+    color: #f16530 !important;
+	float: left;
+	margin-right: 5px;
+}
+.item h3{
+	font-size:22px !important;
+}
+.header{
+	background-color:#f5f5f5;
+}
+.col_1 {
+    font-weight: bold;
+}
+.pbag{
+	background-color:#f5f5f5;
+	padding: 0px 5px;
+}
+.managetagh2{
+	margin-top:3px !important;
+	background-color: rgba(138, 136, 136, 0.17);
+	padding: 5px;
+}
+.col_123{
+	padding:10px 0px 0px 20px;
+}
+.read-more {
+    padding: 0px !important;
+}
+.contactush2{
+	padding-bottom:12px;
+	font-size:20px !important
+}
+.homebox {
+	height:270px !important
+

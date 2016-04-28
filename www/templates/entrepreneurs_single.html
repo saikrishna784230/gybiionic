@@ -1,19 +1,20 @@
 <ion-view class="post-view">
   <ion-content>
-  <div class="item item-avatar">
+  <div class="item item-divider item-avatar">
     <img alt="ConsomBio" class="img-responsive" ng-src="{{post.acf.project_logo}}">
     <h2>{{post.title}}</h2>
+     <i class="icon ion-location"></i>
     <p>{{post.acf.state}} , {{post.acf.country.name}}</p>
   </div>
     <div class="item item-body">
-    	<p ng-bind-html="post.acf.company_overview | rawHtml"></p>
-        <hr />
+    	<p class="pbag" ng-bind-html="post.acf.company_overview | rawHtml"></p>
+       
         <div class="read-more col">
               <a ui-sref="app.bussinessplan({postId: post.ID})" class="button button-small button-block button-assertive icon-right ion-chevron-right ">
                 Business Plan Summary
               </a>
             </div>
-        <hr />
+       
         
         <h3>Summary</h3>
         <div class="row">
@@ -42,26 +43,26 @@
           </div>
 		</div>
         <div ng-hide="!post.acf.products_services.length">
-		<hr />
+		
         <h3> Products and Services</h3>
             <div class="list">
     
             <div ng-repeat="product in post.acf.products_services" class="item item-thumbnail-left">
     
               <img ng-src="{{ product.product_image }}">
-              <h2>{{ product.	product_name }}</h2>
+              <h2 class="managetagh2">{{ product.	product_name }}</h2>
               <p ng-bind-html="product.product_description | rawHtml"></p>
             </div>
            </div>
         </div>
        
        <div ng-hide="!post.acf.markets.length">
-       <hr />
-         <h3>Markets {{post.acf.markets.length}}</h3>
+    
+         <h3>Markets{{post.acf.markets.length}}</h3>
          <div class="row header">
-          <div class="col">Market</div>
-          <div class="col">Annual Size</div>
-          <div class="col">% Growth Rate</div>
+          <div class="col  col_1">Market</div>
+          <div class="col  col_1">Annual Size</div>
+          <div class="col  col_1">% Growth Rate</div>
         </div>
         <div class="row" ng-repeat="market in post.acf.markets">
           <div class="col">{{market.market}}</div>
@@ -70,20 +71,20 @@
         </div>
        </div>
        <div ng-hide="!post.acf.management.length">
-        <hr />
+       
         <h3>Management</h3>
         	<div class="list">
         
                 <div ng-repeat="mangement in post.acf.management" class="item item-avatar">
         
                   <img ng-src="{{ mangement.photograph }}">
-                  <h2>{{ mangement.full_name }}</h2>
+                  <h2 class="managetagh2">{{ mangement.full_name }}</h2>
+                   
                   <p ng-bind-html="mangement.description | rawHtml"></p>
                 </div>
        </div>
-       </div>
-       <hr />
-     
+      
+      
 
     <div class="item">
       <button class="button button-full button-energized">Business Plan</button>
@@ -119,7 +120,7 @@
 
     <button class="button button-full button-energized"> Dontaion</button>
     <button class="button button-full button-assertive"> Invest</button>
-    <hr />
+   
        <h3><strong>Documents</strong></h3>
            
 

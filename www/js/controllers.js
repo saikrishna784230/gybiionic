@@ -165,6 +165,10 @@ angular.module('gybi.controllers', [])
 		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
 	};
 })
+// WORDPRESS Controller
+.controller('ContactUsCtrl', function($scope, $http, $stateParams, PostService, $ionicLoading) {
+	
+})
 .controller('EntrepreneurslistCtrl',function($scope, $http, $stateParams, PostService, $ionicLoading) {
 	
 	$scope.page = 1;

@@ -1,29 +1,30 @@
 <ion-view class="post-view">
   <ion-content>
-  <div class="item item-avatar">
+  <div class="item item-divider item-avatar">
      <img alt ="ConsomBio" class="img-responsive" img ng-src="{{post.author.avatar}}" />
          <h2>{{post.title}}</h2>
+         <i class="icon ion-location"></i>
         <span ng-repeat="country in post.acf.country_of_interest" >{{country.name}}</span>
         <span ng-repeat="areas in post.acf.areas_of_interest" >{{areas.name}}{{$last ? '':','}}</span>
        
   </div>
   <br />
-    <div calss="item item-body">
+    <div class="item item-body">
     <h3>{{post.title}}</h3>
        <p ng-bind-html="post.acf.expertise | rawHtml"></p>
        </div>
        
-       <hr />
+      <div class="item item-body">
          <h3>Products And Services</h3>
-        
-        <hr />
+        </div>
+       
             <div class="item item-body">
-               <h3><strong>What Do You Expect</strong></h3> 
+               <h3>What Do You Expect</h3> 
                    <p ng-bind-html="post.acf.what_do_you_expect | rawHtml"></p>
                       </div>
-          <hr />
-               
-               <h3><strong>Availability Information</strong></h3>
+         
+               <div class="item item-body">
+               <h3>Availability Information</h3>
                    <div class = "row">
                        <div class="col">Country Of Intrest</div>
                           <div class ="col" ng-repeat="country in post.acf.country_of_interest">{{ country.name}}</div>
@@ -35,13 +36,13 @@
                       <span  ng-repeat="areas in post.acf.areas_of_interest">{{areas.name}}{{$last ? '':','}}</span>
                       </div>
                          </div>    
-                   
+                   </div>
                      
                    
-             
+            
               
      </div>
-    
+   
     
   </ion-content>
   <ion-footer-bar class="post-footer bar bar-footer bar-positive">

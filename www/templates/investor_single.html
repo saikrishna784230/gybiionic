@@ -1,8 +1,9 @@
 <ion-view class="post-view">
   <ion-content>
-  <div class="item item-avatar">
+  <div class="item item-divider item-avatar">
      <img alt="ConsomBio" class="img-responsive" ng-src="{{post.author.avatar}}"/>
     <h2>{{post.title}}</h2>
+     <i class="icon ion-location"></i>
         <p ng-repeat="country in post.acf.country_of_interest" >{{country.name}}</p>
         <span ng-repeat="interested in post.acf.interested_industries" >{{interested.name}}{{$last ? '':','}}</span>
        
@@ -17,7 +18,7 @@
     	<p ng-bind-html="post.acf.how_do_you_want_to_be_involved | rawHtml"></p>
           </div> 
    
-   <hr />
+  
    
    <div class="row">
 		  <div class="col">Investment Capital</div>

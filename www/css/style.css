@@ -57,5 +57,19 @@
     background-color: red !important;
     margin-bottom: 20px;
 }
+.carditem_1{
+background-color:#3598db !important;
+color: white !important;
+}
+.carditem_2{
+background-color:#9a59b5 !important; 
+color: white !important;
+/*margin-right: 20px !important;*/
+padding-right: 20px !important;
+}
+.carditem_2 h1{
+	color: white !important;
+}
+
 
 

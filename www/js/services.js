@@ -23,6 +23,41 @@ angular.module('gybi.services', [])
 
 		return deferred.promise;
 	};
+	
+	this.loginService = function(username, password)
+	{
+		var deferred = $q.defer();
+		 $http({ method: 'POST', url: WORDPRESS_API_URL + 'user/login/', params: { 'username' : username, 'password' : password  } }).success(function(data) {
+			if(data != false)
+			{
+				logout();
+//				this.logout();
+				window.localStorage.setItem('userInfo', JSON.stringify(data));
+				window.localStorage.setItem("userID", data.ID);
+				window.localStorage.setItem("role", data.role);
+				window.localStorage.setItem("display_name", data.display_name);
+			}
+			deferred.resolve(data);
+		}).error(function(data) {
+			alert(data);
+			alert(1);
+			deferred.reject(data);
+		});
+		return deferred.promise;
+	}
+	
+	function logout()
+	{
+		window.localStorage.removeItem('userInfo');
+		window.localStorage.removeItem('userID');
+		window.localStorage.removeItem('role');
+		window.localStorage.removeItem('display_name');				
+	}
+	
+	this.logout = function()
+	{
+		logout();
+	}
 
 
 })

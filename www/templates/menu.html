@@ -6,6 +6,9 @@
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left"> </button>
       </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-person" menu-toggle="right"> </button>
+      </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
@@ -17,15 +20,20 @@
         <ion-item menu-close href="#/app/supporters" class="positive-bg"><i class="icon ion-help-circled"></i> Supporters </ion-item>
         <ion-item menu-close href="#/app/organizations" class="positive-bg"><i class="icon ion-briefcase"></i> Organization </ion-item>
         <ion-item menu-close href="#/app/contactus" > Contact </ion-item>
-        <ion-item menu-close href="#/app/blog"> Blog </ion-item>
-        <ion-item menu-close ng-click="login()"> Login </ion-item>
-        <ion-item menu-close ng-click="register()"> Register </ion-item>
         <ion-item menu-close href="#/app/post/99"> What is GYBI? </ion-item>
         <ion-item menu-close href="#/app/post/107"> FAQ </ion-item>
         <ion-item menu-close href="#/app/post/109"> Our Rules </ion-item>
         <ion-item menu-close href="#/app/post/113"> Terms of Use </ion-item>
         <ion-item menu-close href="#/app/post/97"> Who we are? </ion-item>
         <ion-item menu-close href="#/app/post/115"> Privacy Policy </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+  <ion-side-menu side="right">
+    <ion-content >
+      <ion-list >
+        <ion-item menu-close ng-click="login()"><i class="icon ion-person"></i> Login </ion-item>
+        <ion-item menu-close ng-click="register()"><i class="icon ion-person-add"></i> Register </ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>

@@ -118,7 +118,6 @@ angular.module('gybi.controllers', [])
 	
 	$scope.doLogIn = function()
 	{
-		alert('hi1');
 //		CustomeService.loginService($scope.user.email, $scope.user.password);
 		$ionicLoading.show({
 			template: 'Please Wait'
@@ -128,7 +127,8 @@ angular.module('gybi.controllers', [])
 			{
 				$scope.errormessage = "Please Check Username / Password";
 			}else{
-				$scope.state.go('home');
+				$ionicLoading.hide();
+				$state.go('app.userinfo');
 			}
 			$ionicLoading.hide();
 		});
@@ -153,6 +153,10 @@ angular.module('gybi.controllers', [])
 	$scope.goToLogIn = function(){
 		$state.go('login');
 	};
+})
+
+.controller('userInfoCtrl', function($scope, $rootScope) {
+	$scope.user = window.localStorage.getItem("userInfo");
 })
 
 .controller('ForgotPasswordCtrl', function($scope, $state) {

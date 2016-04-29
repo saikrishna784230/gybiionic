@@ -80,6 +80,15 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
 	} 
   })
+  .state('app.userinfo', {
+    url: "/userinfo",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/userinfo.html",
+    	controller: 'userInfoCtrl'
+      }
+	} 
+  })
   .state('app.entrepreneurs', {
     url: "/entrepreneurs",
     views: {

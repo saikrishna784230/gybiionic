@@ -23,6 +23,30 @@ angular.module('gybi.services', [])
 
 		return deferred.promise;
 	};
+	
+	this.loginService = function(username, password)
+	{
+		alert('hi');
+		var deferred = $q.defer();
+		 $http({ method: 'POST', url: WORDPRESS_API_URL + 'user/login/', params: { 'username' : username, 'password' : password  } }).success(function(data) {
+			if(data != false)
+			{
+				$rootScope.userInfo = data;
+				$rootScope.userID = data.ID;
+				$rootScope.role = data.role;
+				$rootScope.display_name = data.display_name;
+				window.localStorage.setItem("ID", data.ID);
+				window.localStorage.setItem("role", data.role);
+				window.localStorage.setItem("display_name", data.display_name);
+			}
+			deferred.resolve(data);
+		}).error(function(data) {
+			alert(data);
+			alert(1);
+			deferred.reject(data);
+		});
+		return deferred.promise;
+	}
 
 
 })

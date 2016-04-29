@@ -44,17 +44,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider.state('app.login', {
-    url: "/login",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/login.html",
-    	controller: 'LoginCtrl'
-      }
-	} 
-  })
-  
-  .state('signup', {
+  $stateProvider.state('signup', {
     url: "/signup",
     templateUrl: "templates/signup.html",
     controller: 'SignupCtrl'
@@ -80,6 +70,15 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
 		controller: 'HomeCtrl'
       }
     }
+  })
+  .state('app.login', {
+    url: "/login",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/login.html",
+    	controller: 'LoginCtrl'
+      }
+	} 
   })
   .state('app.entrepreneurs', {
     url: "/entrepreneurs",

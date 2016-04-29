@@ -105,31 +105,39 @@ angular.module('gybi.controllers', [])
 		});
 	};
 })
-.controller('LoginCtrl', function($scope, $state, $templateCache, $q, $rootScope) {
-	console.log('hi');
-	$scope.goToSignUp = function(){
-		$state.go('signup');
-	};
-
-	$scope.goToForgotPassword = function(){
-		$state.go('forgot-password');
-	};
-
-	$scope.doLogIn = function(){
-		$state.go('app.feeds-categories');
-	};
+.controller('LoginCtrl', function($scope, $state, $templateCache, CustomeService,  $q, $rootScope, $ionicLoading) {
 
 	$scope.user = {};
 
-	$scope.user.email = "john@doe.com";
-	$scope.user.pin = "12345";
+	$scope.user.email = "";
+	$scope.user.password = "";
+	$scope.errormessage = "";
 
 	// We need this for the form validation
 	$scope.selected_tab = "";
+	
+	$scope.doLogIn = function()
+	{
+		alert('hi1');
+//		CustomeService.loginService($scope.user.email, $scope.user.password);
+		$ionicLoading.show({
+			template: 'Please Wait'
+		});
+		CustomeService.loginService($scope.user.email, $scope.user.password).then(function(data){
+			if(data == false)
+			{
+				$scope.errormessage = "Please Check Username / Password";
+			}else{
+				$scope.state.go('home');
+			}
+			$ionicLoading.hide();
+		});
+	}
+	
+	$scope.sharePost = function(link){
+		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
+	};
 
-	$scope.$on('my-tabs-changed', function (event, data) {
-		$scope.selected_tab = data.title;
-	});
 
 })
 

@@ -80,6 +80,15 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
 	} 
   })
+  .state('app.logout', {
+    url: "/logout",
+	views: {
+      'menuContent': {
+		templateUrl: "",
+		controller: 'LogOutCtrl'
+	  }
+	}
+  })
   .state('app.userinfo', {
     url: "/userinfo",
     views: {

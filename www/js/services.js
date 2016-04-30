@@ -54,9 +54,10 @@ angular.module('gybi.services', [])
 		window.localStorage.removeItem('display_name');				
 	}
 	
-	this.logout = function()
+	this.logoutService = function()
 	{
 		logout();
+		return true;
 	}
 
 

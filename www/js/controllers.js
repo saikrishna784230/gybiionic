@@ -141,6 +141,18 @@ angular.module('gybi.controllers', [])
 
 })
 
+.controller('LogOutCtrl', function($scope, $state, $templateCache, CustomeService,  $q, $rootScope, $ionicLoading, $ionicHistory) {
+	$ionicLoading.show({
+		template: 'Please Wait'
+	});
+	CustomeService.logoutService();
+		$ionicLoading.hide();
+		$ionicHistory.clearCache();
+        $ionicHistory.clearHistory();
+        $ionicHistory.nextViewOptions({ disableBack: true, historyRoot: true });
+		$state.go('app.home');
+})
+
 .controller('SignupCtrl', function($scope, $state) {
 	$scope.user = {};
 

@@ -121,7 +121,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     views: {
       'menuContent': {
         templateUrl: "templates/entrepreneur_dashboard.html",
-        controller: 'EntrepreneurCtrl'
+        controller: 'SignupCtrl'
       }
     }
   })
@@ -130,7 +130,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     views: {
       'menuContent': {
         templateUrl: "templates/invester_dashboard.html",
-        controller: 'EntrepreneurCtrl'
+        controller: 'SignupCtrl'
       }
     }
   })
@@ -139,7 +139,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     views: {
       'menuContent': {
         templateUrl: "templates/supporter_dashboard.html",
-        controller: 'EntrepreneurCtrl'
+        controller: 'SignupCtrl'
       }
     }
   })
@@ -148,7 +148,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     views: {
       'menuContent': {
         templateUrl: "templates/organization_dashboard.html",
-        controller: 'EntrepreneurCtrl'
+        controller: 'SignupCtrl'
       }
     }
   })

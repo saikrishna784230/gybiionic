@@ -60,16 +60,42 @@
 .carditem_1{
 background-color:#3598db !important;
 color: white !important;
+border: none !important;
+height: 100px;
 }
 .carditem_2{
 background-color:#9a59b5 !important; 
 color: white !important;
-/*margin-right: 20px !important;*/
-padding-right: 20px !important;
+border: none !important;
+height: 100px;
 }
-.carditem_2 h1{
+.carditem_2 h3{
 	color: white !important;
+	margin-top: 20px !important;
+	margin-left: 10px !important;
 }
+.carditem_1 h3{
+	color: white !important;
+	margin-top: 20px !important;
+	margin-left: 10px !important;
+}
+.profile_header hr{
+	 width: 100px;
+    height: 3px;
+    border: #f26530;
+    background-color: red !important;
+    float: left;
+}
+.icons{
+	font-size: 20px !important;
+	float: right !important;
+	padding-right: 20px !important; 
+	margin-top: 25px;
+}
+/*.dash_enter{
+	height: 150px !important;
+}*/
+
 
 
 

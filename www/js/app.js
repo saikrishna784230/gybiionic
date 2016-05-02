@@ -152,6 +152,33 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
+  .state('app.entrepreneurdashboardsummary', {
+    url: "/entrepreneurdashboardsummary",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/entrepreneur_dashboard-summary.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+    .state('app.dashboardaccount', {
+    url: "/dashboardaccount",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/dashboard-account.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+ .state('app.dashboardinvite', {
+    url: "/dashboardinvite",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/dashboard-invite.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
   .state('app.bussinessplan', {
     url: "/bussinessplan/:postId",
     views: {

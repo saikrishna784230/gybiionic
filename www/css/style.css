@@ -69,16 +69,31 @@ color: white !important;
 border: none !important;
 height: 100px;
 }
+.carditem_3{
+background-color:green !important; 
+color: white !important;
+border: none !important;
+height: 100px;
+}
 .carditem_2 h3{
 	color: white !important;
 	margin-top: 20px !important;
 	margin-left: 10px !important;
+	font-size: 20px!important;
 }
 .carditem_1 h3{
 	color: white !important;
 	margin-top: 20px !important;
 	margin-left: 10px !important;
+	font-size: 20px!important;
 }
+.carditem_3 h3{
+	color: white !important;
+	margin-top: 20px !important;
+	margin-left: 10px !important;
+	font-size: 20px!important;
+}
+
 .profile_header hr{
 	 width: 100px;
     height: 3px;
@@ -92,9 +107,43 @@ height: 100px;
 	padding-right: 20px !important; 
 	margin-top: 25px;
 }
-/*.dash_enter{
-	height: 150px !important;
-}*/
+.dash_profile{
+	border: none !important;
+	background-color: #00a7d1 !important;
+	color: white !important;
+}
+.dash_profile a{
+	 position: relative;
+    top: 8px !important;
+    font-size: 18px;
+}
+.tag_profile p{
+	margin-top: 16px !important;
+	color: white !important;
+	font-size: 17px !important;
+}
+.tag_profile h3{
+	padding: 12px;
+}
+img.img_profile {
+   position: relative;
+    top: 0px !important;
+}
+.btn_account{
+	margin-left: 15px !important;
+}
+.contact_account{
+	background-color: #ddd !important; 
+}
+.invite_row{
+	background-color: #f27e55 !important;
+	color: white;
+	font-size: 20px;
+
+}
+.icon_right{
+	float: right !important;
+}
 
 
 

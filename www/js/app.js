@@ -188,6 +188,25 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
+  .state('app.dashboardgreatbusinessplansummary', {
+    url: "/dashboardgreatbusinessplansummary",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/entrepreneur_dashboard great business plan-summary.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+   .state('app.dashboardtotalfundssummary', {
+    url: "/dashboardtotalfundssummary",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/dashboard_total funds summary.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+
    .state('app.investors', {
     url: "/investors",
     views: {

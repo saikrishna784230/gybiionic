@@ -133,7 +133,8 @@ img.img_profile {
 	margin-left: 15px !important;
 }
 .contact_account{
-	background-color: #ddd !important; 
+	background-color: #00a7d1 !important; 
+	color: #fff !important;
 }
 .invite_row{
 	background-color: #f27e55 !important;
@@ -143,6 +144,7 @@ img.img_profile {
 }
 .icon_right{
 	float: right !important;
+	margin-bottom: 8px;
 }
 .invite_head h2{
 	padding: 12px;
@@ -163,6 +165,23 @@ img.img_profile {
 }
 .header_invite{
 	background-color: black !important;
+}
+.great_bpshead{
+background-color: #00a7d1 !important; 
+}
+.great_bpshead h4{
+	padding: 10px !important;
+	color: #fff !important; 
+}
+.great_bpstextarea{
+	height: 80px !important;
+}
+.message_plan h4{
+	color: black !important
+}
+.great_bspbutton{
+	color: #00a7d1 !important;
+	margin: 10px !important;
 }
 
 

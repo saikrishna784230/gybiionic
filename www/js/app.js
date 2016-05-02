@@ -165,7 +165,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     url: "/dashboardaccount",
     views: {
       'menuContent': {
-        templateUrl: "templates/dashboard-account.html",
+        templateUrl: "templates/dashboard_account.html",
         controller: 'SignupCtrl'
       }
     }
@@ -174,7 +174,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     url: "/dashboardinvite",
     views: {
       'menuContent': {
-        templateUrl: "templates/dashboard-invite.html",
+        templateUrl: "templates/dashboardinvite.html",
         controller: 'SignupCtrl'
       }
     }
@@ -183,7 +183,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     url: "/bussinessplan/:postId",
     views: {
       'menuContent': {
-        templateUrl: "templates/bussinessplan_plan_summary.html",
+        templateUrl: "templates/bussinessplan_summary.html",
         controller: 'EntrepreneurCtrl'
       }
     }
@@ -192,7 +192,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     url: "/dashboardgreatbusinessplansummary",
     views: {
       'menuContent': {
-        templateUrl: "templates/entrepreneur_dashboard great business plan-summary.html",
+        templateUrl: "templates/entrepreneurdashboard_greatbusinessplansummary.html",
         controller: 'SignupCtrl'
       }
     }
@@ -201,7 +201,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     url: "/dashboardtotalfundssummary",
     views: {
       'menuContent': {
-        templateUrl: "templates/dashboard_total funds summary.html",
+        templateUrl: "templates/dashboard_totalfundssummary.html",
         controller: 'SignupCtrl'
       }
     }

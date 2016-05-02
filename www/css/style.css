@@ -130,11 +130,19 @@ img.img_profile {
     top: 0px !important;
 }
 .btn_account{
-	margin-left: 15px !important;
+	margin-left: 12px !important;
 }
 .contact_account{
 	background-color: #00a7d1 !important; 
 	color: #fff !important;
+}
+.contact_account a, i{
+	font-size: 20px !important;
+	padding-top: 10px;
+}
+.contact_account p{
+	color: white !important;
+	display: block;
 }
 .invite_row{
 	background-color: #f27e55 !important;
@@ -142,13 +150,13 @@ img.img_profile {
 	font-size: 20px;
 
 }
-.icon_right{
-	float: right !important;
-	margin-bottom: 8px;
-}
 .invite_head h2{
 	padding: 12px;
 	color:#00a7d1;
+}
+.great_bpshead  h3{
+	padding: 10px !important;
+	color: #fff;
 }
 .invite_pro_details h3{
 	padding: 10px !important;
@@ -183,6 +191,13 @@ background-color: #00a7d1 !important;
 	color: #00a7d1 !important;
 	margin: 10px !important;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+ .home_tab{
+   float: left;
+    width: 50% !important;
+  }
+}
+
 
 
 

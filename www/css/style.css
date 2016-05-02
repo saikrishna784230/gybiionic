@@ -144,6 +144,26 @@ img.img_profile {
 .icon_right{
 	float: right !important;
 }
+.invite_head h2{
+	padding: 12px;
+	color:#00a7d1;
+}
+.invite_pro_details h3{
+	padding: 10px !important;
+}
+.invite_pro_details p{
+	font-size: 15px !important;
+	text-align: center;
+		padding:10px;
+}
+.invite_pro_details h4{
+	text-align: center;
+	color: white;
+	margin: 0px;
+}
+.header_invite{
+	background-color: black !important;
+}
 
 
 

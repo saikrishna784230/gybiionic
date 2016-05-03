@@ -200,13 +200,15 @@ background-color: #00a7d1 !important;
 	float: right;
 	background-color: #00a7d1 !important;
 	color: white !important;
-margin: 10px !important;
+margin: 5spx !important;
 }
 .msgplan{
-	margin: 10px !important;
+	margin-top: 10px !important;
 }
 .msgplan .icon_plan{
 	margin: 5px !important;
+	position: relative;
+	top: 3px;
 }
 .img-responsive{
 	width: 600px !important;
@@ -220,7 +222,12 @@ margin: 10px !important;
 	color: white;
 font-weight: bold;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+.img_profileplan{
+	position: relative;
+	top: 40px;
+	left: 50px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
  .home_tab{
    float: left;
     width: 50% !important;
@@ -228,6 +235,11 @@ font-weight: bold;
   .img-responsive{
   	left: 70px;
   }
+  .img_profileplan{
+	position: relative;
+	top: 40px;
+	left: 20px;
+	}
 }
 @media (min-width: 320px) and (max-width: 767px) {
 	.img-responsive{
@@ -235,6 +247,11 @@ font-weight: bold;
   	width: 270px !important;
   	height: 270px !important;
   }
+  .img_profileplan{
+	position: relative;
+	top: 40px;
+	left: 0px;
+	}
 }
 @media screen (min-width: 319px) {
 	.img-responsive{

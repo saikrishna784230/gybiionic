@@ -196,6 +196,18 @@ background-color: #00a7d1 !important;
 	color: #00a7d1 !important;
 	margin: 10px !important;
 }
+.great_bspbuttonmsg{
+	float: right;
+	background-color: #00a7d1 !important;
+	color: white !important;
+margin: 10px !important;
+}
+.msgplan{
+	margin: 10px !important;
+}
+.msgplan .icon_plan{
+	margin: 5px !important;
+}
 .img-responsive{
 	width: 600px !important;
 	height: 600px !important;

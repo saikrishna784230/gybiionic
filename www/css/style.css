@@ -30,7 +30,12 @@
 }
 .contactush2{
 	padding-bottom:12px;
-	font-size:20px !important
+	font-size:20px !important;
+	color:white;
+	
+}
+.conctactus_page{
+	background-color: #00a7d1 !important;
 }
 .homebox {
 	height:270px !important
@@ -60,16 +65,186 @@
 .carditem_1{
 background-color:#3598db !important;
 color: white !important;
+border: none !important;
+height: 100px;
 }
 .carditem_2{
 background-color:#9a59b5 !important; 
 color: white !important;
-/*margin-right: 20px !important;*/
-padding-right: 20px !important;
+border: none !important;
+height: 100px;
 }
-.carditem_2 h1{
+.carditem_3{
+background-color: #006600 !important; 
+color: white !important;
+border: none !important;
+height: 100px;
+}
+.carditem_2 h3{
+	color: white !important;
+	margin-top: 20px !important;
+	margin-left: 10px !important;
+	font-size: 20px!important;
+}
+.carditem_1 h3{
+	color: white !important;
+	margin-top: 20px !important;
+	margin-left: 10px !important;
+	font-size: 20px!important;
+}
+.carditem_3 h3{
+	color: white !important;
+	margin-top: 20px !important;
+	margin-left: 10px !important;
+	font-size: 20px!important;
+}
+
+.profile_header hr{
+	 width: 100px;
+    height: 3px;
+    border: #f26530;
+    background-color: red !important;
+    float: left;
+}
+.icons{
+	font-size: 20px !important;
+	float: right !important;
+	padding-right: 20px !important; 
+	margin-top: 25px;
+}
+.dash_profile{
+	border: none !important;
+	background-color: #00a7d1 !important;
 	color: white !important;
 }
+.dash_profile a{
+	 position: relative;
+    top: 8px !important;
+    font-size: 18px;
+}
+.tag_profile p{
+	margin-top: 16px !important;
+	color: white !important;
+	font-size: 17px !important;
+}
+.tag_profile h3{
+	padding: 12px;
+}
+img.img_profile {
+   position: relative;
+    top: 0px !important;
+}
+.btn_account{
+	margin-left: 12px !important;
+}
+.contact_account{
+	background-color: #00a7d1 !important; 
+	color: #fff !important;
+}
+.contact_account a, i{
+	font-size: 20px !important;
+	padding-top: 10px;
+}
+.contact_account p{
+	color: white !important;
+	display: block;
+}
+.invite_row{
+	background-color: #f27e55 !important;
+	color: white;
+	font-size: 20px;
+
+}
+.invite_head h2{
+	padding: 12px;
+	color:#00a7d1;
+}
+.great_bpshead  h3{
+	padding: 10px !important;
+	color: #fff;
+}
+.invite_pro_details h3{
+	padding: 10px !important;
+}
+.invite_pro_details p{
+	font-size: 15px !important;
+	text-align: center;
+		padding:10px;
+}
+.invite_pro_details h4{
+	text-align: center;
+	color: white;
+	margin: 0px;
+}
+.header_invite{
+	background-color: black !important;
+}
+.great_bpshead{
+background-color: #00a7d1 !important; 
+}
+.great_bpshead h4{
+	padding: 10px !important;
+	color: #fff !important; 
+}
+.great_bpstextarea{
+	height: 80px !important;
+}
+.message_plan h4{
+	color: black !important
+}
+.great_bspbutton{
+	color: #00a7d1 !important;
+	margin: 10px !important;
+}
+.great_bspbuttonmsg{
+	float: right;
+	background-color: #00a7d1 !important;
+	color: white !important;
+margin: 10px !important;
+}
+.msgplan{
+	margin: 10px !important;
+}
+.msgplan .icon_plan{
+	margin: 5px !important;
+}
+.img-responsive{
+	width: 600px !important;
+	height: 600px !important;
+	text-align: center !important;
+	display: block;
+	position: relative;
+	left: 350px;
+}
+.calm-bg{
+	color: white;
+font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+ .home_tab{
+   float: left;
+    width: 50% !important;
+  }
+  .img-responsive{
+  	left: 70px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+	.img-responsive{
+  	left: 0px;
+  	width: 270px !important;
+  	height: 270px !important;
+  }
+}
+@media screen (min-width: 319px) {
+	.img-responsive{
+  	left: 5px;
+  	width: 250px !important;
+  	height: 250px !important;
+  }
+}
+
+
 
 
 

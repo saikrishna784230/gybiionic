@@ -33,13 +33,25 @@
   <ion-side-menu side="right">
     <ion-content >
       <ion-list >
+
       	
         <ion-item menu-close ui-sref="app.login" ng-show="!userid"><i class="icon ion-person"></i> Login </ion-item>
         <ion-item menu-close ng-click="register()" ng-show="!userid"><i class="icon ion-person-add"></i> Register</ion-item>
         <!-- loged in users only -->
         <ion-item menu-close href="#/app/entrepreneurdashboard" ng-show="userid"> Entrepreneur Dashboard </ion-item>
     
-        <ion-item menu-close href="#/app/logout" ng-show="userid" > Logout </ion-item>
+        
+<!-- loged in users only -->
+<ion-item menu-close href="#/app/entrepreneurdashboard" ng-show="userid"> Entrepreneur Dashboard </ion-item>
+<ion-item menu-close href="#/app/entrepreneurdashboardsummary" ng-show="userid"> Entrepreneur Dashboard Summary</ion-item>
+<ion-item menu-close href="#/app/dashboardgreatbusinessplansummary" ng-show="userid">Great Bussiness Plan Summary  </ion-item>
+<ion-item menu-close href="#/app/dashboardtotalfundssummary" ng-show="userid">Dashboard Totla Funds Summary  </ion-item>
+<ion-item menu-close href="#/app/dashboardinvite" ng-show="userid"> Entrepreneur Dashboard Invite </ion-item>
+<ion-item menu-close href="#/app/dashboardaccount" ng-show="userid"> Entrepreneur Dashboard Account </ion-item>
+<ion-item menu-close href="#/app/dashboardaccountchangepassword" ng-show="userid"> Entrepreneur Dashboard Account Change Password</ion-item>
+<ion-item menu-close href="#/app/dashboardaccountprivacy" ng-show="userid"> Entrepreneur Dashboard Account Privacy</ion-item>
+<ion-item menu-close href="#/app/logout" ng-show="userid" > Logout </ion-item>
+
 
       </ion-list>
     </ion-content>

@@ -161,15 +161,79 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
+  .state('app.entrepreneurdashboardsummary', {
+    url: "/entrepreneurdashboardsummary",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/entrepreneur_dashboard-summary.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+    .state('app.dashboardaccount', {
+    url: "/dashboardaccount",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/dashboard_account.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+    .state('app.dashboardaccountchangepassword', {
+    url: "/dashboardaccountchangepassword",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/dashboard_accountchangepassword.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+    .state('app.dashboardaccountprivacy', {
+    url: "/dashboardaccountprivacy",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/dashboard_accountprivacy.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+ .state('app.dashboardinvite', {
+    url: "/dashboardinvite",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/dashboardinvite.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
   .state('app.bussinessplan', {
     url: "/bussinessplan/:postId",
     views: {
       'menuContent': {
-        templateUrl: "templates/bussinessplan_plan_summary.html",
+        templateUrl: "templates/bussinessplan_summary.html",
         controller: 'EntrepreneurCtrl'
       }
     }
   })
+  .state('app.dashboardgreatbusinessplansummary', {
+    url: "/dashboardgreatbusinessplansummary",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/entrepreneurdashboard_greatbusinessplansummary.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+   .state('app.dashboardtotalfundssummary', {
+    url: "/dashboardtotalfundssummary",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/dashboard_totalfundssummary.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+
    .state('app.investors', {
     url: "/investors",
     views: {

@@ -30,7 +30,12 @@
 }
 .contactush2{
 	padding-bottom:12px;
-	font-size:20px !important
+	font-size:20px !important;
+	color:white;
+	
+}
+.conctactus_page{
+	background-color: #00a7d1 !important;
 }
 .homebox {
 	height:270px !important
@@ -70,7 +75,7 @@ border: none !important;
 height: 100px;
 }
 .carditem_3{
-background-color:green !important; 
+background-color: #006600 !important; 
 color: white !important;
 border: none !important;
 height: 100px;
@@ -191,10 +196,39 @@ background-color: #00a7d1 !important;
 	color: #00a7d1 !important;
 	margin: 10px !important;
 }
+.img-responsive{
+	width: 600px !important;
+	height: 600px !important;
+	text-align: center !important;
+	display: block;
+	position: relative;
+	left: 350px;
+}
+.calm-bg{
+	color: white;
+font-weight: bold;
+}
 @media (min-width: 768px) and (max-width: 1023px) {
  .home_tab{
    float: left;
     width: 50% !important;
+  }
+  .img-responsive{
+  	left: 70px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+	.img-responsive{
+  	left: 0px;
+  	width: 270px !important;
+  	height: 270px !important;
+  }
+}
+@media screen (min-width: 319px) {
+	.img-responsive{
+  	left: 5px;
+  	width: 250px !important;
+  	height: 250px !important;
   }
 }
 

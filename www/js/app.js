@@ -116,6 +116,15 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
+  .state('app.faq', {
+    url: "/faq",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/faq.html",
+        controller: 'FaqCtrl'
+      }
+    }
+  })
   .state('app.entrepreneurdashboard', {
     url: "/entrepreneurdashboard",
     views: {

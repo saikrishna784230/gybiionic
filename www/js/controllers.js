@@ -43,6 +43,7 @@ angular.module('gybi.controllers', [])
 	$ionicLoading.show({
 		template: 'Loading GYBI'
 	});
+	console.log(window.localStorage.getItem("userInfo"));
 	CustomeService.buildYourCampaign().then(function(data){
 		$scope.campaigns = data;
 		$ionicLoading.hide();
@@ -51,7 +52,11 @@ angular.module('gybi.controllers', [])
 		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
 	};
 })
+.controller('SideMenuController', function($scope) {
+	$scope.userid = window.localStorage.getItem("userID");
+	$scope.role = window.localStorage.removeItem('role');
 
+})
 .controller('SendMailCtrl', function($scope) {
 	$scope.sendMail = function(){
 		cordova.plugins.email.isAvailable(
@@ -341,4 +346,31 @@ angular.module('gybi.controllers', [])
   	});
 	
 	
+}).controller('FaqCtrl', function($scope, $http, $stateParams, PostService, $ionicLoading) {
+	$ionicLoading.show({
+		template: 'Loading FAQ...'
+	});
+  
+  /*
+   * if given group is the selected group, deselect it
+   * else, select the given group
+   */
+  $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };
+	PostService.getFaq()
+	.then(function(data){
+		$scope.posts = data;
+		$ionicLoading.hide();
+	});
+	$scope.sharePost = function(link){
+		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
+	};
 });

@@ -11,7 +11,7 @@ angular.module('gybi.services', [])
 	};
 })
 
-.service('CustomeService', function ($rootScope, $http, $q, WORDPRESS_API_URL){
+.service('CustomeService', function ($rootScope, $state, $http, $q, WORDPRESS_API_URL){
 
 	this.buildYourCampaign = function() {
 		var deferred = $q.defer();
@@ -43,6 +43,113 @@ angular.module('gybi.services', [])
 			alert(1);
 			deferred.reject(data);
 		});
+		return deferred.promise;
+	}
+	
+	function checklogin()
+	{
+		if(window.localStorage.getItem("userID") == "undefined" ||  window.localStorage.getItem("userID") == '')
+		{
+			$state.go('app.home');
+		}
+		
+	}
+	
+	this.entreprenuer_dashboard = function()
+	{
+		checklogin();
+		var userId = window.localStorage.getItem("userID");
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'customize/enterprenuer_dashboard/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+			deferred.resolve(data);
+		}).error(function(data) {
+			deferred.reject(data);
+		});
+
+		return deferred.promise;
+	}
+	
+	this.entreprenuer_dashboard = function()
+	{
+		checklogin();
+		var userId = window.localStorage.getItem("userID");
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'customize/enterprenuer_dashboard/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+			deferred.resolve(data);
+		}).error(function(data) {
+			deferred.reject(data);
+		});
+
+		return deferred.promise;
+	}
+	
+	this.entreprenuer_raised_funds = function()
+	{
+		checklogin();
+		var userId = window.localStorage.getItem("userID");
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'customize/raised_funds/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+			deferred.resolve(data);
+		}).error(function(data) {
+			deferred.reject(data);
+		});
+
+		return deferred.promise;
+	}
+	
+	this.investor_dashboard = function()
+	{
+		checklogin();
+		var userId = window.localStorage.getItem("userID");
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'customize/investor_dashboard/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+			deferred.resolve(data);
+		}).error(function(data) {
+			deferred.reject(data);
+		});
+
+		return deferred.promise;
+	}
+	
+	this.investor_funded_projects = function()
+	{
+		checklogin();
+		var userId = window.localStorage.getItem("userID");
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'customize/investor_funded_projects/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+			deferred.resolve(data);
+		}).error(function(data) {
+			deferred.reject(data);
+		});
+
+		return deferred.promise;
+	}
+	
+	this.messsages = function()
+	{
+		checklogin();
+		var userId = window.localStorage.getItem("userID");
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'customize/messsages/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+			deferred.resolve(data);
+		}).error(function(data) {
+			deferred.reject(data);
+		});
+
+		return deferred.promise;
+	}
+	
+	this.open_messsage = function(messageId)
+	{
+		checklogin();
+		var userId = window.localStorage.getItem("userID");
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'customize/open_messsage/?userid='+userId+'&messageid='+messageId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+			deferred.resolve(data);
+		}).error(function(data) {
+			deferred.reject(data);
+		});
+
 		return deferred.promise;
 	}
 	
@@ -289,6 +396,18 @@ angular.module('gybi.services', [])
 	this.getSupporters = function() {
 		var deferred = $q.defer();
 		$http.jsonp(WORDPRESS_API_URL + 'posts?type=supporter&_jsonp=JSON_CALLBACK')
+		.success(function(data) {
+			deferred.resolve(data);
+		})
+		.error(function(data) {
+			deferred.reject(data);
+		});
+
+		return deferred.promise;
+	};
+	this.getFaq = function(page) {
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'posts?type=hrf_faq&page='+page+'&_jsonp=JSON_CALLBACK')
 		.success(function(data) {
 			deferred.resolve(data);
 		})

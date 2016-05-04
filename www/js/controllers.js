@@ -43,6 +43,9 @@ angular.module('gybi.controllers', [])
 	$ionicLoading.show({
 		template: 'Loading GYBI'
 	});
+	$scope.$on('$ionicView.beforeEnter', function (event, viewData) {
+  		viewData.enableBack = false;
+	}); 
 	console.log(window.localStorage.getItem("userInfo"));
 	CustomeService.buildYourCampaign().then(function(data){
 		$scope.campaigns = data;

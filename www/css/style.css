@@ -227,6 +227,11 @@ font-weight: bold;
 	top: 40px;
 	left: 50px;
 }
+.ivtrdash_profile{
+	border: none !important;
+    background-color: #fff !important;
+    color: black !important;
+}
 @media (min-width: 768px) and (max-width: 1024px) {
  .home_tab{
    float: left;

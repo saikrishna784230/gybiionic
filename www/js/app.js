@@ -237,7 +237,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     url: "/investordashboardsummary",
     views: {
       'menuContent': {
-        templateUrl: "templates/investor_dashboard-summary.html",
+        templateUrl: "templates/investor_dashboard_summary.html",
         controller: 'SignupCtrl'
       }
     }

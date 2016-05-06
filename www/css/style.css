@@ -125,7 +125,7 @@ height: 100px;
 	border: none !important;
 	background-color: #00a7d1 !important;
 	color: white !important;
-	padding: 20px !important;
+	
 }
 .dash_profile a, p{
 	/* position: relative;
@@ -134,22 +134,31 @@ height: 100px;
     color: white !important;  
 }
 .dash_profile h3{
-	margin-left: 45px !important;
 	color: white;
-	font-size: 15px !important;
+	font-size: 18px !important;
 }
 
 .tag_profile p{
-	margin-top: 16px !important;
+	margin-top: 7px !important;
 	color: white !important;
 	font-size: 17px !important;
 }
 .tag_profile h3{
 	padding: 12px;
 }
+/*.tag_message{
+	text-align: center !important;
+}*/
+.tag_message p{
+	color: black !important;
+	margin-top: 14px;
+}
+.tagp_message{
+	color: black !important;
+}
 img.img_profile {
    position: relative;
-    top: 9px !important;
+    top: 0px !important;
 }
 .btn_account{
 	margin-left: 12px !important;
@@ -166,11 +175,24 @@ img.img_profile {
 	color: white !important;
 	display: block;
 }
+.invite_details{
+	background-color: black !important;
+	/*text-align: center !important;*/
+}
+.invite_details h4{
+	color: white !important;
+	font-size: 17px !important;
+}
 .invite_row{
 	background-color: #f27e55 !important;
+}
+.invite_row h3, i{
 	color: white;
 	font-size: 20px;
-
+	margin-left: 12px;
+}
+.inputfld_invite{
+	background-color: rgba(221, 221, 221, 0.27) !important; 
 }
 .invite_head h2{
 	padding: 12px;
@@ -179,6 +201,9 @@ img.img_profile {
 .great_bpshead  h3{
 	padding: 10px !important;
 	color: #fff;
+}
+.btn_invite{
+	margin-top: 13px !important;
 }
 .invite_pro_details h3{
 	padding: 10px !important;
@@ -191,9 +216,10 @@ img.img_profile {
 
 }
 .invite_pro_details h4{
-	text-align: center;
-	color: white;
+	/*text-align: center;*/
+	color: black;
 	margin: 0px;
+	font-size: 17px !important;
 }
 /*.header_invite{
 	bAckground-color: black !important;
@@ -222,7 +248,7 @@ background-color: #00a7d1 !important;
 	float: right;
 	background-color: #00a7d1 !important;
 	color: white !important;
-margin: 5spx !important;
+margin: 5px !important;
 }
 .msgplan{
 	margin-top: 10px !important;

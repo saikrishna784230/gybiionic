@@ -46,6 +46,11 @@ angular.module('gybi.services', [])
 		return deferred.promise;
 	}
 	
+	this.userinfo = function()
+	{
+		return JSON.parse(window.localStorage.getItem("userInfo"))
+	}
+	
 	function checklogin()
 	{
 		if(window.localStorage.getItem("userID") == "undefined" ||  window.localStorage.getItem("userID") == '')
@@ -58,9 +63,11 @@ angular.module('gybi.services', [])
 	this.entreprenuer_dashboard = function()
 	{
 		checklogin();
+		
 		var userId = window.localStorage.getItem("userID");
 		var deferred = $q.defer();
-		$http.jsonp(WORDPRESS_API_URL + 'customize/enterprenuer_dashboard/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+
+		$http.jsonp(WORDPRESS_API_URL + 'user/enterprenuer_dashboard/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
 			deferred.resolve(data);
 		}).error(function(data) {
 			deferred.reject(data);
@@ -69,7 +76,7 @@ angular.module('gybi.services', [])
 		return deferred.promise;
 	}
 	
-	this.entreprenuer_dashboard = function()
+	this.investor_dashboard = function()
 	{
 		checklogin();
 		var userId = window.localStorage.getItem("userID");

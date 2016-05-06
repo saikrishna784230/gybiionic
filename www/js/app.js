@@ -130,7 +130,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     views: {
       'menuContent': {
         templateUrl: "templates/entrepreneur_dashboard.html",
-        controller: 'SignupCtrl'
+        controller: 'entrepreneurController'
       }
     }
   })
@@ -161,20 +161,29 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
-  .state('app.entrepreneurdashboardsummary', {
-    url: "/entrepreneurdashboardsummary",
+  .state('app.messages', {
+    url: "/messages",
     views: {
       'menuContent': {
-        templateUrl: "templates/entrepreneur_dashboard-summary.html",
+        templateUrl: "templates/messages.html",
         controller: 'SignupCtrl'
       }
     }
   })
-    .state('app.dashboardaccount', {
-    url: "/dashboardaccount",
+  .state('app.singlemessage', {
+    url: "/singlemessage/:messageId",
     views: {
       'menuContent': {
-        templateUrl: "templates/dashboard_account.html",
+        templateUrl: "templates/message_single.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+    .state('app.account', {
+    url: "/account",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/account.html",
         controller: 'SignupCtrl'
       }
     }
@@ -197,11 +206,11 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
- .state('app.dashboardinvite', {
-    url: "/dashboardinvite",
+ .state('app.inivitations', {
+    url: "/inivitations",
     views: {
       'menuContent': {
-        templateUrl: "templates/dashboardinvite.html",
+        templateUrl: "templates/invitations.html",
         controller: 'SignupCtrl'
       }
     }
@@ -215,20 +224,12 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
-  .state('app.dashboardgreatbusinessplansummary', {
-    url: "/dashboardgreatbusinessplansummary",
+  
+   .state('app.fundsRaised', {
+    url: "/fudsraised",
     views: {
       'menuContent': {
-        templateUrl: "templates/entrepreneurdashboard_greatbusinessplansummary.html",
-        controller: 'SignupCtrl'
-      }
-    }
-  })
-   .state('app.dashboardtotalfundssummary', {
-    url: "/dashboardtotalfundssummary",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/dashboard_totalfundssummary.html",
+        templateUrl: "templates/funds_raised.html",
         controller: 'SignupCtrl'
       }
     }

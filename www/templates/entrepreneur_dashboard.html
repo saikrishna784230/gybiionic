@@ -6,7 +6,7 @@
     <a class="item item-divider item-avatar" href="#">
       <img src="../img/imgupload.png">
       <h2>Welcome</h2>
-      <p>Username</p>
+       <p >{{userinfo.display_name}}</p>
       <hr />
     </a>
 
@@ -15,7 +15,7 @@
 <div class="card">
  <div class="item item-text-wrap">
  <div class="row">
-    <a href="#" class="col col-75 item carditem_1"><h3>You Have 0 Unread Messages in Your Inbox. </h3>
+    <a href="#" class="col col-75 item carditem_1"><h3>You Have {{post.messsages_count}} Unread Messages in Your Inbox. </h3>
   </a>
     <a href="#" class="col item carditem_1"><i class="icon ion-arrow-right-c icons"></i>
   
@@ -23,12 +23,11 @@
   </div>
   </div>
   </div>
-
-<div class="card">
+<div class="card" ng-hide="post.project_id == 0">
  <div class="item item-text-wrap">
    <!-- <h1 class="item carditem_2">$12537</h1> -->
     <div class="row">
-<a href="#" class="col col-75 item carditem_2"><h3>Total Fund Raised So Far $12537 </i></h3></a>
+	<a href="#" class="col col-75 item carditem_2"><h3>Total Fund Raised So Far {{post.raised_funds > 0 ? '$'+post.raised_funds: 0}} </i></h3></a>
  <a href="#" class="col item carditem_2"><i class="icon ion-arrow-right-c icons"></i></a>
 </div>
 </div>
@@ -49,6 +48,15 @@
   </div>
   </div>
   </div>
+  <div class="card" ng-hide="post.project_id == 0">
+ <div class="item item-text-wrap">
+   <!-- <h1 class="item carditem_2">$12537</h1> -->
+    <div class="row">
+	<a ui-sref="app.singleentrepreneur({postId: post.project_id})" class="col col-75 item carditem_2"><h3>Project Overview </i></h3></a>
+ 	<a ui-sref="app.singleentrepreneur({postId: post.project_id})" class="col item carditem_2"><i class="icon ion-arrow-right-c icons"></i></a>
+</div>
+</div>
+</div>
    
    <!-- 	<div class="card">
 		<div class="item item-icon-right">

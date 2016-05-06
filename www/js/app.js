@@ -130,7 +130,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     views: {
       'menuContent': {
         templateUrl: "templates/entrepreneur_dashboard.html",
-        controller: 'SignupCtrl'
+        controller: 'entrepreneurController'
       }
     }
   })

@@ -45,6 +45,7 @@ angular.module('gybi.controllers', [])
 	});
 	$scope.$on('$ionicView.beforeEnter', function (event, viewData) {
   		viewData.enableBack = false;
+		viewData.showMenuIcon = true;
 	}); 
 	console.log(window.localStorage.getItem("userInfo"));
 	CustomeService.buildYourCampaign().then(function(data){
@@ -56,8 +57,12 @@ angular.module('gybi.controllers', [])
 	};
 })
 .controller('SideMenuController', function($scope) {
-	$scope.userid = window.localStorage.getItem("userID");
-	$scope.role = window.localStorage.removeItem('role');
+	 
+	$scope.Checkuserlogin = function () {
+		$scope.userid = window.localStorage.getItem("userID");
+		$scope.role = window.localStorage.removeItem('role');
+	};
+	$scope.Checkuserlogin();
 
 })
 .controller('SendMailCtrl', function($scope) {
@@ -175,10 +180,23 @@ angular.module('gybi.controllers', [])
 	};
 })
 
-.controller('userInfoCtrl', function($scope, $rootScope) {
-	$scope.user = window.localStorage.getItem("userInfo");
+.controller('userInfoCtrl', function($scope, CustomeService , $rootScope) {
+	$scope.user = CustomeService.userinfo();
 })
 
+.controller('entrepreneurController', function($scope, $http, $stateParams, PostService, CustomeService, $ionicLoading) {
+	$ionicLoading.show({
+		template: 'Loading Entrepreur Dashboard...'
+	});
+	CustomeService.entreprenuer_dashboard().then(function(data){
+		$scope.post = data;
+		$ionicLoading.hide();
+	});
+	$scope.userinfo = CustomeService.userinfo();
+	$scope.sharePost = function(link){
+		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
+	};
+})
 .controller('ForgotPasswordCtrl', function($scope, $state) {
 	$scope.recoverPassword = function(){
 		$state.go('app.feeds-categories');

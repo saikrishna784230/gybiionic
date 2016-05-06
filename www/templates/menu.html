@@ -1,4 +1,4 @@
-<ion-side-menus enable-menu-with-back-views="false" ng-controller="SideMenuController">
+<ion-side-menus enable-menu-with-back-views="true" ng-controller="SideMenuController">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-light">
       <ion-nav-back-button> </ion-nav-back-button>
@@ -7,7 +7,7 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left"> </button>
       </ion-nav-buttons>
       <ion-nav-buttons side="right">
-        <button class="button button-icon button-clear ion-person" menu-toggle="right"> </button>
+        <button class="button button-icon button-clear ion-person" ng-click="Checkuserlogin()" menu-toggle="right"> </button>
       </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>

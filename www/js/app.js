@@ -233,6 +233,34 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
+   .state('app.investordashboardsummary', {
+    url: "/investordashboardsummary",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/investor_dashboard_summary.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+   .state('app.investordashboardinnvestmentenquire', {
+    url: "/investordashboardinnvestmentenquire",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/investordashboard_innvestmentenquire.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+   .state('app.investordashboardtotalfundssummary', {
+    url: "/investordashboardtotalfundssummary",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/investordashboard_totalfundssummary.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+
 
    .state('app.investors', {
     url: "/investors",

@@ -1,45 +1,43 @@
 <ion-view >
   <ion-content>
-   
-  <div class="item tag_profile">
-    <h3>Messages(1)</h3>
-    </div>
-    <div class="card item item-divider dash_profile">
-    <div class="row">
-  <div class="col col-33">
-      <a class="item item-divider item-avatar dash_profile" href="#">
-       <img class="img_profile"src="../img/imgupload.png">
-       <h3>Marcus Walsh</h3>
-      
-      </a>
-  </div>
-  <div class="col col-33"><a href="#" class="item item-divider dash_profile">Great Business Plan</a></div>
-  <div class="col col-33 tag_profile"><p>Mar 15 02:05 PM</p></div>
- </div>
-</div>
- </div> 
- 
- <div class="item tag_profile">
-  <h3>Projects Details</h3>
-  </div>
-  <div class="card">
-         <div class="row header">
-          <div class="col  col_1">Organization Logo</div>
-          <div class="col  col_1">Organization Name</div>
-          <div class="col  col_1">Contact Name</div>
-          <div class="col  col_1">Address</div>
-        </div>
-        <div class="row">
-  <div class="col"> <a href="#">
-       <img class="img_profile"src="../img/imgupload.png">
-      </a></div>
-  <div class="col"><a href="#" class="item">EXELEADMEN</a></div>
-  <div class="col tag_message"><p>INTERNATIONAL CONSULTING</p></div>
-  <div class="col tag_message"><p>--</p></div>
- 
-</div>
-</div>
+
   
+<ion-lists class="posts-list"><br />
+<div class="item item-divider tag_profile">
+<h3>Messages({{post.length}})</h3>
+</div>
+<div class="card">
+  <label class="item item-input ">
+  <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search Messages" ng-model="searchmessages">
+</label>
+</div>
+<!--<div class="list">
+  <label class="item item-input">
+     <input type="text" placeholder="Search Entrepreneurs" ng-model="searchentrepreneur">
+
+  </label>
+  </div> -->
+      <ion-item ng-repeat="post in posts | filter:searchmessages"class="list card post-item">
+      
+      <a class="item item-avatar" ui-sref="app.singlemessage({messageId: post.message_id})">
+      <img src="{{post.from_user_image ? post.from_user_image : '../img/imgupload.png'}}"/>
+      <h2>{{post.message_title}}</h2>
+      <p>{{post.from_user_name}}</p>
+      <small>{{post.message_date}}</small>
+    </a>
+
+        
+        
+          
+              
+         
+      </ion-item>
+      
+    </ion-lists>
+     
+     
   </ion-content>
  
 </ion-view>
+

@@ -1,6 +1,6 @@
 /* Empty. Add your own CSS if you like */
 
-.icon.ion-location {
+.gybi_locationicon {
     color: #f16530 !important;
 	float: left;
 	margin-right: 5px;
@@ -19,9 +19,6 @@
 	padding: 0px 5px;
 	color: black !important;
 }
-.post-heading p, span{
-	color: black !important;
-}
 .managetagh2{
 	margin-top:3px !important;
 	background-color: rgba(138, 136, 136, 0.17);
@@ -38,7 +35,7 @@
 .read-more {
     padding: 0px !important;
 }
-/*contact us*/
+/*contact us start*/
 .contactush2{
 	padding-bottom:12px;
 	font-size:20px !important;
@@ -48,13 +45,11 @@
 .conctactus_page{
 	background-color: #00a7d1 !important;
 }
+/*contactus end*/
 .homebox {
 	height:270px !important
 }
 
-/*.buildcamp{
-	background: url("../img/campain-bg.png") !important;
-}*/
 .buildcamp{
 	background-color: black !important;
 }
@@ -120,7 +115,7 @@ height: 100px;
 .profile_header p{
 	color:black !important;
 }
-.icons{
+.gybi_icons{
 	font-size: 20px !important;
 	float: right !important;
 	padding-right: 20px !important; 
@@ -133,10 +128,7 @@ height: 100px;
 	
 }
 .dash_profile a, p{
-	/* position: relative;
-    top: 8px !important;*/
     font-size: 18px;
-    color: white !important;  
 }
 .dash_profile h3{
 	color: white;
@@ -151,9 +143,6 @@ height: 100px;
 .tag_profile h3{
 	padding: 12px;
 }
-/*.tag_message{
-	text-align: center !important;
-}*/
 .tag_message p{
 	color: black !important;
 	margin-top: 14px;
@@ -182,7 +171,6 @@ img.img_profile {
 }
 .invite_details{
 	background-color: black !important;
-	/*text-align: center !important;*/
 }
 .invite_details h4{
 	color: white !important;
@@ -215,20 +203,15 @@ img.img_profile {
 }
 .invite_pro_details p{
 	font-size: 15px !important;
-	/*text-align: center;*/
 		padding:10px;
 		color: black !important;
 
 }
 .invite_pro_details h4{
-	/*text-align: center;*/
 	color: black;
 	margin: 0px;
 	font-size: 17px !important;
 }
-/*.header_invite{
-	bAckground-color: black !important;
-}*/
 .invite_ptag p{
 	color: black !important;
 }
@@ -286,6 +269,11 @@ font-weight: bold;
     background-color: #fff !important;
     color: black !important;
     margin-left: -7px !important;
+}
+.gybi_loginerrormsg{
+	background-color: #ddd;
+	color: red !important;
+	padding: 10px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

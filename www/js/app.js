@@ -84,7 +84,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     url: "/logout",
 	views: {
       'menuContent': {
-		templateUrl: "",
+		templateUrl: "templates/userinfo.html",
 		controller: 'LogOutCtrl'
 	  }
 	}
@@ -167,7 +167,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     views: {
       'menuContent': {
         templateUrl: "templates/messages.html",
-        controller: 'SignupCtrl'
+        controller: 'messageController'
       }
     }
   })
@@ -176,6 +176,15 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     views: {
       'menuContent': {
         templateUrl: "templates/message_single.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+  .state('app.investormessage', {
+    url: "/investormessage",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/investor_message.html",
         controller: 'SignupCtrl'
       }
     }
@@ -262,8 +271,8 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
-   .state('app.investordashboardtotalfundssummary', {
-    url: "/investordashboardtotalfundssummary",
+   .state('app.dashboardtotalfundssummary', {
+    url: "/dashboardtotalfundssummary",
     views: {
       'menuContent': {
         templateUrl: "templates/investordashboard_totalfundssummary.html",

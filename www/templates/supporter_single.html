@@ -3,7 +3,7 @@
   <div class="item item-divider item-avatar">
      <img alt ="ConsomBio" class="img-responsive" img ng-src="{{post.author.avatar}}" />
          <h2>{{post.title}}</h2>
-         <i class="icon ion-location"></i>
+         <i class="icon ion-location gybi_locationicon"></i>
         <span ng-repeat="country in post.acf.country_of_interest" >{{country.name}}</span>
         <span ng-repeat="areas in post.acf.areas_of_interest" >{{areas.name}}{{$last ? '':','}}</span>
        

@@ -57,32 +57,15 @@
 </div>
 </div>
 </div>
-   
-   <!-- 	<div class="card">
-		<div class="item item-icon-right">
-		   <h3>Latest Messages <i class="icon ion-chevron-down icons"></i></h3>
-		</div>
-		 <div class="list">
-
-	    	<a class="item item-divider item-avatar" href="#">
-	     	<img src="../img/imgupload.png">
-	     	<h2>Venkman</h2>
-	     	<p>Back off, man. I'm a scientist.</p>
-	    	</a>
-		</div>
-  		<div class="item item-divider">
-   	 		<a href="#" class="item"><i class="icon ion-arrow-right-c icons"></i> View All Messages</a>
-  		</div>
-	</div> 
-	<div class="item item-divider item-icon-right">
-		<h3>Projects Details <i class="icon ion-chevron-down icons"></i></h3>
-		</div>
-         <div class="row header">
-          <div class="col  col_1">Organization Logo</div>
-          <div class="col  col_1">Organization Name</div>
-          <div class="col  col_1">Contact Name</div>
-          <div class="col  col_1">Address</div>
-        </div> -->
+<div class="card" ng-hide="post.project_id != 0">
+ <div class="item item-text-wrap">
+   <!-- <h1 class="item carditem_2">$12537</h1> -->
+    <div class="row">
+	<a ui-sref="#app/noaccess" class="col col-75 item carditem_2"><h3>Please Create your Profile </i></h3></a>
+ 	<a ui-sref="#app/noaccess" class="col item carditem_2"><i class="icon ion-arrow-right-c icons"></i></a>
+</div>
+</div>
+</div>
         <a href="#/app/logout" ><button class="button button-block button-assertive">
           Logout
         </button></a>

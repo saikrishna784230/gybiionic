@@ -40,10 +40,28 @@
     
         
 <!-- loged in users only -->
-<ion-item menu-close href="#/app/entrepreneurdashboard" ng-show="userid"> Entrepreneur Dashboard </ion-item>
-<ion-item menu-close href="#/app/messages" ng-show="userid"> Messages </ion-item>
-<ion-item menu-close href="#/app/dashboardtotalfundssummary" ng-show="userid">Funds Raised </ion-item>
+<!-- Entrepreneur -->
+<ion-item menu-close href="#/app/entrepreneurdashboard" ng-show="userid && role=='Entrepreneur'"> Dashboard </ion-item>
+<ion-item menu-close href="#/app/dashboardtotalfundssummary" ng-show="userid && role=='Entrepreneur'">Funds Raised </ion-item>
+
+<!-- Investor -->
+<ion-item menu-close href="#/app/inverterdashboard" ng-show="userid && role=='Investor'"> Dashboard </ion-item>
+<ion-item menu-close href="#/app/dashboardtotalfundssummary" ng-show="userid && role=='Investor'">Funds Raised </ion-item>
+
+<!-- Supporter -->
+<ion-item menu-close href="#/app/supporterdashboard" ng-show="userid && role=='Supporter'"> Dashboard </ion-item>
+<ion-item menu-close href="#" ng-show="userid && role=='Supporter'">Blog </ion-item>
+
+<!-- Organization -->
+<ion-item menu-close href="#/app/organizationdashboard" ng-show="userid && role=='organization'"> Dashboard </ion-item>
+<ion-item menu-close href="#" ng-show="userid && role=='organization'"> Entrepreneurs </ion-item>
+<ion-item menu-close href="#" ng-show="userid && role=='organization'"> Investor </ion-item>
+<ion-item menu-close href="#" ng-show="userid && role=='organization'"> Supporters </ion-item>
+
+
+<ion-item menu-close href="#/app/messages" ng-show="userid">Messages </ion-item>
 <ion-item menu-close href="#/app/inivitations" ng-show="userid"> Invitations </ion-item>
+<ion-item menu-close href="#" ng-show="userid && role=='organization'"> Invite Orginzations </ion-item>
 <ion-item menu-close href="#/app/account" ng-show="userid"> Account </ion-item>
 <ion-item menu-close href="#/app/logout" ng-show="userid" > Logout </ion-item>
 

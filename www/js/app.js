@@ -139,7 +139,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     views: {
       'menuContent': {
         templateUrl: "templates/invester_dashboard.html",
-        controller: 'SignupCtrl'
+        controller: 'investorController'
       }
     }
   })
@@ -148,19 +148,20 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     views: {
       'menuContent': {
         templateUrl: "templates/supporter_dashboard.html",
-        controller: 'SignupCtrl'
+        controller: 'supporterController'
       }
     }
   })
-  .state('app.organizationdashboard', {
+   .state('app.organizationdashboard', {
     url: "/organizationdashboard",
     views: {
       'menuContent': {
         templateUrl: "templates/organization_dashboard.html",
-        controller: 'SignupCtrl'
+        controller: 'organizationController'
       }
     }
   })
+
   .state('app.messages', {
     url: "/messages",
     views: {
@@ -400,7 +401,17 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
         controller: 'PlaylistCtrl'
       }
     }
-  });
+  })
+  .state('app.noaccess', {
+    url: "/noaccess",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/noaccess.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+  ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });

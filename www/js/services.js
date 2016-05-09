@@ -76,20 +76,6 @@ angular.module('gybi.services', [])
 		return deferred.promise;
 	}
 	
-	this.investor_dashboard = function()
-	{
-		checklogin();
-		var userId = window.localStorage.getItem("userID");
-		var deferred = $q.defer();
-		$http.jsonp(WORDPRESS_API_URL + 'customize/enterprenuer_dashboard/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
-			deferred.resolve(data);
-		}).error(function(data) {
-			deferred.reject(data);
-		});
-
-		return deferred.promise;
-	}
-	
 	this.entreprenuer_raised_funds = function()
 	{
 		checklogin();
@@ -109,7 +95,35 @@ angular.module('gybi.services', [])
 		checklogin();
 		var userId = window.localStorage.getItem("userID");
 		var deferred = $q.defer();
-		$http.jsonp(WORDPRESS_API_URL + 'customize/investor_dashboard/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+		$http.jsonp(WORDPRESS_API_URL + 'user/investor_dashboard/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+			deferred.resolve(data);
+		}).error(function(data) {
+			deferred.reject(data);
+		});
+
+		return deferred.promise;
+	}
+	
+	this.supporter_dashboard = function()
+	{
+		checklogin();
+		var userId = window.localStorage.getItem("userID");
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'user/supporter_dashboard/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+			deferred.resolve(data);
+		}).error(function(data) {
+			deferred.reject(data);
+		});
+
+		return deferred.promise;
+	}
+	
+	this.organization_dashboard = function()
+	{
+		checklogin();
+		var userId = window.localStorage.getItem("userID");
+		var deferred = $q.defer();
+		$http.jsonp(WORDPRESS_API_URL + 'user/organization_dashboard/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
 			deferred.resolve(data);
 		}).error(function(data) {
 			deferred.reject(data);

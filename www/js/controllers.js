@@ -60,7 +60,7 @@ angular.module('gybi.controllers', [])
 	 
 	$scope.Checkuserlogin = function () {
 		$scope.userid = window.localStorage.getItem("userID");
-		$scope.role = window.localStorage.removeItem('role');
+		$scope.role = window.localStorage.getItem('role');
 	};
 	$scope.Checkuserlogin();
 
@@ -189,6 +189,48 @@ angular.module('gybi.controllers', [])
 		template: 'Loading Entrepreur Dashboard...'
 	});
 	CustomeService.entreprenuer_dashboard().then(function(data){
+		$scope.post = data;
+		$ionicLoading.hide();
+	});
+	$scope.userinfo = CustomeService.userinfo();
+	$scope.sharePost = function(link){
+		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
+	};
+})
+.controller('investorController', function($scope, $http, $stateParams, PostService, CustomeService, $ionicLoading) {
+	
+	$ionicLoading.show({
+		template: 'Loading Investor Dashboard...'
+	});
+	CustomeService.investor_dashboard().then(function(data){
+		$scope.post = data;
+		$ionicLoading.hide();
+	});
+	$scope.userinfo = CustomeService.userinfo();
+	$scope.sharePost = function(link){
+		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
+	};
+})
+.controller('supporterController', function($scope, $http, $stateParams, PostService, CustomeService, $ionicLoading) {
+	
+	$ionicLoading.show({
+		template: 'Loading Supporter Dashboard...'
+	});
+	CustomeService.supporter_dashboard().then(function(data){
+		$scope.post = data;
+		$ionicLoading.hide();
+	});
+	$scope.userinfo = CustomeService.userinfo();
+	$scope.sharePost = function(link){
+		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
+	};
+})
+.controller('organizationController', function($scope, $http, $stateParams, PostService, CustomeService, $ionicLoading) {
+	
+	$ionicLoading.show({
+		template: 'Loading Organization Dashboard...'
+	});
+	CustomeService.organization_dashboard().then(function(data){
 		$scope.post = data;
 		$ionicLoading.hide();
 	});

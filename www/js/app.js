@@ -234,7 +234,16 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
-   .state('app.investordashboardsummary', {
+   .state('app.investormessages', {
+    url: "/fudsraised",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/funds_raised.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+   /*.state('app.investordashboardsummary', {
     url: "/investordashboardsummary",
     views: {
       'menuContent': {
@@ -242,7 +251,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
         controller: 'SignupCtrl'
       }
     }
-  })
+  })*/
    .state('app.investordashboardinnvestmentenquire', {
     url: "/investordashboardinnvestmentenquire",
     views: {

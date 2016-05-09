@@ -39,12 +39,13 @@ angular.module('gybi.controllers', [])
     }, 1000);
   };
 })
-.controller('HomeCtrl', function($scope, $http, CustomeService, PostService, $ionicLoading) {
+.controller('HomeCtrl', function($scope, $http, CustomeService, PostService, $ionicLoading, $ionicNavBarDelegate) {
 	$ionicLoading.show({
 		template: 'Loading GYBI'
 	});
+	$ionicNavBarDelegate.showBackButton(true);
 	$scope.$on('$ionicView.beforeEnter', function (event, viewData) {
-  		viewData.enableBack = false;
+  		viewData.disableBack= true;
 		viewData.showMenuIcon = true;
 	}); 
 	console.log(window.localStorage.getItem("userInfo"));
@@ -118,7 +119,7 @@ angular.module('gybi.controllers', [])
 		});
 	};
 })
-.controller('LoginCtrl', function($scope, $state, $templateCache, CustomeService,  $q, $rootScope, $ionicLoading) {
+.controller('LoginCtrl', function($scope, $state, $templateCache, CustomeService,  $q, $rootScope, $ionicLoading, $ionicViewService) {
 
 	$scope.user = {};
 
@@ -140,8 +141,22 @@ angular.module('gybi.controllers', [])
 			{
 				$scope.errormessage = "Please Check Username / Password";
 			}else{
+				var userRole = window.localStorage.getItem('role');
+
 				$ionicLoading.hide();
-				$state.go('app.userinfo');
+				
+				$ionicViewService.nextViewOptions({
+					disableBack: true
+				});
+				
+				if(userRole == 'Entrepreneur') $state.go('app.entrepreneurdashboard');
+				else if(userRole == 'Investor') $state.go('app.inverterdashboard');
+				else if(userRole == 'Supporter') $state.go('app.supporterdashboard');
+				else if(userRole == 'organization') $state.go('app.organizationdashboard');
+				else{
+					$scope.errormessage = "Admin can't able to login on mobile";
+				}
+//				$state.go('app.userinfo');
 			}
 			$ionicLoading.hide();
 		});
@@ -154,15 +169,19 @@ angular.module('gybi.controllers', [])
 
 })
 
-.controller('LogOutCtrl', function($scope, $state, $templateCache, CustomeService,  $q, $rootScope, $ionicLoading, $ionicHistory) {
+.controller('LogOutCtrl', function($scope, $state, $templateCache, CustomeService,  $q, $rootScope, $ionicLoading, $ionicHistory, $ionicViewService) {
+	
 	$ionicLoading.show({
 		template: 'Please Wait'
-	});
+	}); 
 	CustomeService.logoutService();
 		$ionicLoading.hide();
 		$ionicHistory.clearCache();
         $ionicHistory.clearHistory();
-        $ionicHistory.nextViewOptions({ disableBack: true, historyRoot: true });
+//        $ionicHistory.nextViewOptions({ disableBack: true, historyRoot: true });
+		$ionicViewService.nextViewOptions({
+			disableBack: true
+		});
 		$state.go('app.home');
 })
 
@@ -239,6 +258,19 @@ angular.module('gybi.controllers', [])
 		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
 	};
 })
+.controller('messageController', function($scope, $http, $stateParams, PostService, CustomeService, $ionicLoading) {
+	$ionicLoading.show({
+		template: 'Loading Messages...'
+	});
+	CustomeService.messsages().then(function(data){
+		$scope.posts = data;
+		$ionicLoading.hide();
+	});
+	$scope.userinfo = CustomeService.userinfo();
+	$scope.sharePost = function(link){
+		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
+	};
+})
 .controller('ForgotPasswordCtrl', function($scope, $state) {
 	$scope.recoverPassword = function(){
 		$state.go('app.feeds-categories');
@@ -278,12 +310,12 @@ angular.module('gybi.controllers', [])
 	
 	$scope.page = 1;
 	$scope.posts = [];
-	var loading = false;
+	$scope.loading = false;
 	$scope.loadMore = function() {
-
-		if(loading == false)
+		if($scope.loading == false)
 		{
-			loading = true;
+
+			$scope.loading = true;
 			$ionicLoading.show({ template: 'Loading Entrepreneurs...' });
 			PostService.getEntrepreneurs($scope.page).then(function(data){
 				
@@ -294,8 +326,9 @@ angular.module('gybi.controllers', [])
 					$scope.posts.push(value);
 					$ionicLoading.hide();
 					$scope.$broadcast('scroll.infiniteScrollComplete');
+					$scope.loading = false
+					return false;;
 				});
-				loading = false;		
 			}else{
 				$ionicLoading.hide();
 				$scope.$broadcast('scroll.infiniteScrollComplete');
@@ -307,6 +340,7 @@ angular.module('gybi.controllers', [])
   	
 	};
 	$scope.$on('$stateChangeSuccess', function() {
+		$scope.loading = false;		
     	$scope.loadMore();
   	});
 	

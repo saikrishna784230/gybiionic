@@ -151,7 +151,7 @@ angular.module('gybi.services', [])
 		checklogin();
 		var userId = window.localStorage.getItem("userID");
 		var deferred = $q.defer();
-		$http.jsonp(WORDPRESS_API_URL + 'customize/messsages/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+		$http.jsonp(WORDPRESS_API_URL + 'user/messsages/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
 			deferred.resolve(data);
 		}).error(function(data) {
 			deferred.reject(data);
@@ -180,6 +180,7 @@ angular.module('gybi.services', [])
 		window.localStorage.removeItem('userID');
 		window.localStorage.removeItem('role');
 		window.localStorage.removeItem('display_name');				
+
 	}
 	
 	this.logoutService = function()

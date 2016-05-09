@@ -84,7 +84,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     url: "/logout",
 	views: {
       'menuContent': {
-		templateUrl: "",
+		templateUrl: "templates/userinfo.html",
 		controller: 'LogOutCtrl'
 	  }
 	}
@@ -167,7 +167,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
     views: {
       'menuContent': {
         templateUrl: "templates/messages.html",
-        controller: 'SignupCtrl'
+        controller: 'messageController'
       }
     }
   })

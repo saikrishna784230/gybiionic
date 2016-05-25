@@ -258,6 +258,7 @@ angular.module('gybi.controllers', [])
 		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
 	};
 })
+
 .controller('messageController', function($scope, $http, $stateParams, PostService, CustomeService, $ionicLoading) {
 	$ionicLoading.show({
 		template: 'Loading Messages...'
@@ -271,6 +272,7 @@ angular.module('gybi.controllers', [])
 		window.plugins.socialsharing.share('Check this post here: ', null, null, link);
 	};
 })
+
 .controller('ForgotPasswordCtrl', function($scope, $state) {
 	$scope.recoverPassword = function(){
 		$state.go('app.feeds-categories');

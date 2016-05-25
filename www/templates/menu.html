@@ -46,8 +46,13 @@
 
 <!-- Investor -->
 <ion-item menu-close href="#/app/inverterdashboard" ng-show="userid && role=='Investor'"> Dashboard </ion-item>
+<<<<<<< HEAD
 <ion-item menu-close href="#/app/fudsraised" ng-show="userid && role=='Investor'">Funds Raised </ion-item>
 
+=======
+<!-- <ion-item menu-close href="#/app/dashboardtotalfundssummary" ng-show="userid && role=='Investor'">Funds Raised </ion-item>
+ -->
+>>>>>>> eb32fa8804115a979d0326725dde0541d6b5c878
 <!-- Supporter -->
 <ion-item menu-close href="#/app/supporterdashboard" ng-show="userid && role=='Supporter'"> Dashboard </ion-item>
 <ion-item menu-close href="#" ng-show="userid && role=='Supporter'">Blog </ion-item>
@@ -64,6 +69,7 @@
 <ion-item menu-close href="#" ng-show="userid && role=='organization'"> Invite Orginzations </ion-item>
 <ion-item menu-close href="#/app/account" ng-show="userid"> Account </ion-item>
 <ion-item menu-close href="#/app/logout" ng-show="userid" > Logout </ion-item>
+<ion-item menu-close href="#/app/investormessage" ng-show="userid" > Investor Message </ion-item>
 
 
       </ion-list>

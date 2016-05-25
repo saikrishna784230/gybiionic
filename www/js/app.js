@@ -180,6 +180,15 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
+  .state('app.investormessage', {
+    url: "/investormessage",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/investor_message.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
     .state('app.account', {
     url: "/account",
     views: {
@@ -238,7 +247,16 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
-   .state('app.investordashboardsummary', {
+   .state('app.investormessages', {
+    url: "/fudsraised",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/funds_raised.html",
+        controller: 'SignupCtrl'
+      }
+    }
+  })
+   /*.state('app.investordashboardsummary', {
     url: "/investordashboardsummary",
     views: {
       'menuContent': {
@@ -246,7 +264,7 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
         controller: 'SignupCtrl'
       }
     }
-  })
+  })*/
    .state('app.investordashboardinnvestmentenquire', {
     url: "/investordashboardinnvestmentenquire",
     views: {
@@ -256,8 +274,8 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
-   .state('app.investordashboardtotalfundssummary', {
-    url: "/investordashboardtotalfundssummary",
+   .state('app.dashboardtotalfundssummary', {
+    url: "/dashboardtotalfundssummary",
     views: {
       'menuContent': {
         templateUrl: "templates/investordashboard_totalfundssummary.html",

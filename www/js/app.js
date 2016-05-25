@@ -348,6 +348,15 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
+  .state('app.underprocess', {
+    url: "/underprocess",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/underprocess.html",
+        controller: 'ContactUsCtrl'
+      }
+    }
+  })
  .state('app.post', {
     url: "/post/:postId",
     views: {

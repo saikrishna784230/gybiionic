@@ -171,13 +171,16 @@ img.img_profile {
 }
 .invite_details{
 	background-color: black !important;
+	height: 50px;
 }
 .invite_details h4{
 	color: white !important;
 	font-size: 17px !important;
+	margin-top: 0px;
 }
 .invite_row{
 	background-color: #f27e55 !important;
+	height: 43px
 }
 .invite_row h3, i{
 	color: white;
@@ -220,7 +223,7 @@ background-color: #00a7d1 !important;
 }
 .great_bpshead h4{
 	padding: 10px !important;
-	color: #fff !important; 
+	/*color: #fff !important; */
 }
 .great_bpstextarea{
 	height: 80px !important;
@@ -229,14 +232,23 @@ background-color: #00a7d1 !important;
 	color: black !important
 }
 .great_bspbutton{
-	color: #00a7d1 !important;
+	/*color: #00a7d1 !important;*/
 	margin: 10px !important;
 }
 .great_bspbuttonmsg{
 	float: right;
 	background-color: #00a7d1 !important;
-	color: white !important;
-margin: 5px !important;
+	/*color: white !important;*/
+
+}
+.gybi_messages h2{
+	background-color: #00a7d1;
+	color: white;
+	padding: 5px;
+
+}
+.gybi_msgsingle{
+	background-color: rgba(128, 128, 128, 0.1) !important;
 }
 .msgplan{
 	margin-top: 10px !important;
@@ -246,6 +258,7 @@ margin: 5px !important;
 	margin: 5px !important;
 	position: relative;
 	top: 3px;
+	color: black;
 }
 .img-responsive{
 	width: 600px !important;
@@ -262,7 +275,7 @@ font-weight: bold;
 .img_profileplan{
 	position: relative;
 	top: 40px;
-	left: 50px;
+	left: 42px;
 }
 .ivtrdash_profile{
 	border: none !important;
@@ -275,10 +288,44 @@ font-weight: bold;
 	color: red !important;
 	padding: 10px;
 }
+.gybi_under{
+	text-align: center;
+	padding: 30px;
+	height: 300px;
+	font-family: Agency FB;
+  background: #00a7d1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#00a7d1, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00a7d1, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00a7d1, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#00a7d1, white); /* Standard syntax */
+	/*width: 50%;*/
+	margin: 0 auto;
+
+}
+.gybi_under h1{
+	color: white;
+	position: relative;
+	top: 100px;
+}
+
+/*.gybi_imgun{
+	background-color: #00a7d1 !important; 
+}*/
+.gybi_posthead{
+	color: white !important;
+	font-weight: bold !important;
+}
+.gybi_faqicon{
+	color: black  !important;
+
+}
+.btn_logout{
+	text-decoration: none !important;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
  .home_tab{
-   float: left;
+   float: left !important;
     width: 50% !important;
   }
   .img-responsive{
@@ -286,8 +333,8 @@ font-weight: bold;
   }
   .img_profileplan{
 	position: relative;
-	top: 40px;
-	left: 20px;
+	top: 37px;
+	left: 15px;
 	}
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -299,10 +346,10 @@ font-weight: bold;
   .img_profileplan{
 	position: relative;
 	top: 40px;
-	left: 0px;
+	left: -8px;
 	}
 }
-@media screen (min-width: 319px) {
+@media screen (max-width: 320px) {
 	.img-responsive{
   	left: 5px;
   	width: 250px !important;

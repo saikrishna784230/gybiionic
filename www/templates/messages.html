@@ -20,7 +20,7 @@
   </div> -->
       <ion-item ng-repeat="post in posts | filter:searchmessages"class="list card post-item">
       
-      <a class="item item-avatar" ui-sref="app.singlemessage({messageId: post.message_id})">
+      <a class="item item-divider item-avatar gybi_messages" ui-sref="app.singlemessage({messageId: post.message_id})">
       <img src="{{post.from_user_image ? post.from_user_image : '../img/imgupload.png'}}"/>
       <h2>{{post.message_title}}</h2>
       <p>{{post.from_user_name}}</p>

@@ -15,7 +15,6 @@ angular.module('gybi.services', [])
 
 	this.buildYourCampaign = function() {
 		var deferred = $q.defer();
-		alert(WORDPRESS_API_URL + 'customize/buildcampaign/'+'?_jsonp=JSON_CALLBACK');
 		$http.jsonp(WORDPRESS_API_URL + 'customize/buildcampaign/'+'?_jsonp=JSON_CALLBACK').success(function(data) {
 			deferred.resolve(data);
 		}).error(function(data) {

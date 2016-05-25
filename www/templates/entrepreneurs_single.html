@@ -87,7 +87,7 @@
       
 
     <div class="item">
-      <button class="button button-full button-energized">Business Plan</button>
+      <button ng-show="userid" class="button button-full button-energized">Business Plan</button>
              
      
      </div>
@@ -118,10 +118,10 @@
        </div>
     </div>
 
-    <button class="button button-full button-energized"> Dontaion</button>
-    <button class="button button-full button-assertive"> Invest</button>
+    <button ng-show="userid" class="button button-full button-energized"> Dontaion</button>
+    <button ng-show="userid" class="button button-full button-assertive"> Invest</button>
    
-       <h3><strong>Documents</strong></h3>
+       <h3 ng-show="userid"><strong>Documents</strong></h3>
            
 
 </div>	

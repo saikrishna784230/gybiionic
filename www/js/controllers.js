@@ -266,6 +266,7 @@ angular.module('gybi.controllers', [])
 	});
 	CustomeService.messsages().then(function(data){
 		$scope.posts = data;
+		$scope.post_count = data.length;
 		$ionicLoading.hide();
 	});
 	$scope.userinfo = CustomeService.userinfo();
@@ -317,11 +318,9 @@ angular.module('gybi.controllers', [])
 	$scope.loadMore = function() {
 		if($scope.loading == false)
 		{
-
 			$scope.loading = true;
 			$ionicLoading.show({ template: 'Loading Entrepreneurs...' });
 			PostService.getEntrepreneurs($scope.page).then(function(data){
-				
 			if(data.length > 0)
 			{
 				$scope.page = parseInt($scope.page) + 1;
@@ -354,6 +353,7 @@ angular.module('gybi.controllers', [])
 		template: 'Loading Entrepreneur...'
 	});
 	var postId = $stateParams.postId;
+	$scope.userid = window.localStorage.getItem("userID");
 	PostService.getPost(postId)
 	.then(function(data){
 		$scope.post = data;

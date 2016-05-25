@@ -1,4 +1,4 @@
-<ion-side-menus enable-menu-with-back-views="true" ng-controller="SideMenuController">
+<ion-side-menus enable-menu-with-back-views="false" ng-controller="SideMenuController">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-light">
       <ion-nav-back-button> </ion-nav-back-button>
@@ -42,12 +42,16 @@
 <!-- loged in users only -->
 <!-- Entrepreneur -->
 <ion-item menu-close href="#/app/entrepreneurdashboard" ng-show="userid && role=='Entrepreneur'"> Dashboard </ion-item>
-<ion-item menu-close href="#/app/dashboardtotalfundssummary" ng-show="userid && role=='Entrepreneur'">Funds Raised </ion-item>
+<ion-item menu-close href="#/app/fudsraised" ng-show="userid && role=='Entrepreneur'">Funds Raised </ion-item>
 
 <!-- Investor -->
 <ion-item menu-close href="#/app/inverterdashboard" ng-show="userid && role=='Investor'"> Dashboard </ion-item>
+
+<ion-item menu-close href="#/app/fudsraised" ng-show="userid && role=='Investor'">Funds Raised </ion-item>
+
 <!-- <ion-item menu-close href="#/app/dashboardtotalfundssummary" ng-show="userid && role=='Investor'">Funds Raised </ion-item>
  -->
+
 <!-- Supporter -->
 <ion-item menu-close href="#/app/supporterdashboard" ng-show="userid && role=='Supporter'"> Dashboard </ion-item>
 <ion-item menu-close href="#" ng-show="userid && role=='Supporter'">Blog </ion-item>

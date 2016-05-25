@@ -48,9 +48,10 @@ angular.module('gybi.controllers', [])
   		viewData.disableBack= true;
 		viewData.showMenuIcon = true;
 	}); 
+	$scope.campaigns = [];
 	console.log(window.localStorage.getItem("userInfo"));
 	CustomeService.buildYourCampaign().then(function(data){
-		$scope.campaigns = data;
+		$scope.campaigns.push(data);
 		$ionicLoading.hide();
 	});
 	$scope.sharePost = function(link){

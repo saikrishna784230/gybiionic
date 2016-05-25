@@ -198,14 +198,17 @@ angular.module('gybi', ['ionic', 'gybi.controllers', 'gybi.services', 'gybi.fact
       }
     }
   })
+  .state('account.accountInfo', {
+    url: "/account_info",
+    templateUrl: "templates/account_info.html",
+    controller: 'SignupCtrl'
+  })
     .state('app.dashboardaccountchangepassword', {
     url: "/dashboardaccountchangepassword",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/dashboard_accountchangepassword.html",
-        controller: 'SignupCtrl'
-      }
-    }
+	templateUrl: "templates/dashboard_accountchangepassword.html",
+	controller: 'SignupCtrl'
+    
+    
   })
     .state('app.dashboardaccountprivacy', {
     url: "/dashboardaccountprivacy",

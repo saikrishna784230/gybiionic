@@ -290,8 +290,11 @@ font-weight: bold;
 }
 .gybi_under{
 	text-align: center;
-	color: #00a7d1 !important;
+	color: white !important;
 	padding: 30px;
+	background-color: #00a7d1;
+	width: 50%;
+	margin: 0 auto;
 }
 .gybi_posthead{
 	color: white !important;

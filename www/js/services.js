@@ -137,7 +137,7 @@ angular.module('gybi.services', [])
 		checklogin();
 		var userId = window.localStorage.getItem("userID");
 		var deferred = $q.defer();
-		$http.jsonp(WORDPRESS_API_URL + 'customize/investor_funded_projects/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
+		$http.jsonp(WORDPRESS_API_URL + 'user/investor_funded_projects/?userid='+userId+'&_jsonp=JSON_CALLBACK').success(function(data) {
 			deferred.resolve(data);
 		}).error(function(data) {
 			deferred.reject(data);
